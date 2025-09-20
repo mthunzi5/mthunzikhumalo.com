@@ -444,3 +444,49 @@ footer {
 }
 
 /* ...existing code... */
+/* ...existing code... */
+
+body {
+  background: #101014;
+  color: #fff;
+}
+
+header, nav, footer {
+  background: #181820;
+}
+
+.logo-text, .nav-links a, .footer-logo, footer {
+  color: #FFD700;
+}
+
+.nav-links a {
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.logo-img, .footer-logo {
+  background: transparent;
+}
+
+.services-list .service, .founder-bio, .contact-info, .map {
+  background: #181818;
+  color: #fff;
+  border-radius: 12px;
+}
+
+h2, h3 {
+  color: #FFD700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .logo-img { height: 30px; }
+  .logo-text { font-size: 1.1rem; }
+  .nav-links { gap: 0.5rem; }
+}
+
+/* ...existing code... */

@@ -5,14 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Global-Future | Tech Solutions</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/global-future-favicon.png">
+  <!-- Updated favicon to use your new logo -->
+  <link rel="icon" href="assets/global2.png" type="image/png">
   <meta name="description" content="Global-Future: Innovative tech solutions, software development, youth empowerment, and the leading school LMS in Africa.">
+  <style>
+    /* Example color palette based on a gold/black/white logo */
+    body {
+      background: #101014;
+      color: #fff;
+    }
+    header, .nav-links a {
+      background: #181820;
+    }
+    .nav-links a {
+      color: #FFD700;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .logo-img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .logo-text {
+      color: #FFD700;
+      font-size: 1.5rem;
+      font-weight: bold;
+      vertical-align: middle;
+      letter-spacing: 1px;
+    }
+    footer {
+      background: #181820;
+      color: #FFD700;
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      font-size: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .footer-logo {
+      height: 32px;
+      margin-bottom: 0.5rem;
+    }
+    /* Responsive nav */
+    @media (max-width: 700px) {
+      .logo-img { height: 30px; }
+      .logo-text { font-size: 1.1rem; }
+      .nav-links { gap: 0.5rem; }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">Global-Future</div>
-      <ul class="nav-links">
+    <nav style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 2vw;">
+      <div class="logo">
+        <img src="assets/global2.png" alt="Global-Future Logo" class="logo-img">
+        <span class="logo-text">Global-Future</span>
+      </div>
+      <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; margin: 0;">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -81,6 +137,7 @@
   </section>
 
   <footer>
+    <img src="assets/global2.png" alt="Global-Future Logo" class="footer-logo">
     &copy; 2025 Global-Future. All rights reserved. | Designed by Mthunzi Khumalo
   </footer>
 
