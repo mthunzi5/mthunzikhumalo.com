@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="assets/style.css">
   <style>
     .portfolio-header { text-align: center; margin-top: 2rem; }
-    .portfolio-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #FFD700; box-shadow: 0 2px 16px rgba(0,0,0,0.3); margin-bottom: 1rem; }
-    .bio { max-width: 700px; margin: 2rem auto; background: #181818; border-radius: 20px; padding: 2rem; color: #fff; box-shadow: 0 2px 16px rgba(0,0,0,0.2); }
+    .portfolio-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3); margin-bottom: 1rem; }
+    .bio { max-width: 700px; margin: 2rem auto; background: #ffffff; border-radius: 20px; padding: 2rem; color: #2c2c2c; box-shadow: 0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
     .projects { max-width: 900px; margin: 2rem auto; }
     .project-list { list-style: none; padding: 0; }
-    .project-list li { background: #222; margin-bottom: 1rem; border-radius: 12px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-    .project-list a { color: #FFD700; font-weight: bold; text-decoration: none; }
-    .project-list a:hover { text-decoration: underline; }
+    .project-list li { background: #ffffff; margin-bottom: 1rem; border-radius: 12px; padding: 1.2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; border-left: 4px solid #e74c3c; }
+    .project-list a { color: #3498db; font-weight: bold; text-decoration: none; transition: color 0.3s; }
+    .project-list a:hover { text-decoration: underline; color: #2980b9; }
     .exp-edu { max-width: 900px; margin: 2rem auto; display: flex; flex-wrap: wrap; gap: 2rem; }
-    .exp, .edu { flex: 1 1 300px; background: #181818; border-radius: 20px; padding: 2rem; color: #fff; box-shadow: 0 2px 16px rgba(0,0,0,0.2); }
+    .exp, .edu { flex: 1 1 300px; background: #ffffff; border-radius: 20px; padding: 2rem; color: #2c2c2c; box-shadow: 0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
+    .exp { border-left: 4px solid #2ecc71; }
+    .edu { border-left: 4px solid #9b59b6; }
     @media (max-width: 900px) { .exp-edu { flex-direction: column; } }
   </style>
 </head>
@@ -26,9 +28,9 @@
     <h3>Tech-Driven Innovator | Software developer | </h3>
     <div class="portfolio-contacts">
       ||<span> 060 682 5110</span> || <br>||
-      <a href="mailto:mthunziapplications@gmail.com">mthunziapplications@gmail.com</a>  ||<br>||
-      <a href="mailto:mthunzikhumalo47@gmail.com">mthunzikhumalo47@gmail.com</a> || <br>||
-      <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" style="color:#FFD700;">LinkedIn</a>
+      <a href="mailto:mthunziapplications@gmail.com" style="color: #3498db;">mthunziapplications@gmail.com</a>  ||<br>||
+      <a href="mailto:mthunzikhumalo47@gmail.com" style="color: #3498db;">mthunzikhumalo47@gmail.com</a> || <br>||
+      <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" style="color:#e74c3c;">LinkedIn</a>
     </div>
   </div>
 
@@ -38,23 +40,23 @@
     </p>
   </div>
 
-  <div class="skills" style="max-width:900px; margin:2rem auto; background:#181818; border-radius:20px; padding:2rem; color:#fff; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
-    <h2 style="color:#FFD700;">Skills</h2>
+  <div class="skills" style="max-width:900px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef;">
+    <h2 style="color:#2c2c2c;">Skills</h2>
     <ul style="display:flex; flex-wrap:wrap; gap:1.5rem; list-style:none; padding:0;">
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Python</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">JavaScript</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">HTML &amp; CSS</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Django</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">React</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Node.js</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">SQL</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Git &amp; GitHub</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">REST APIs</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Machine Learning</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Agile &amp; Scrum</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">UI/UX Design</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Flask</li>
-      <li style="background:#222; border-radius:12px; padding:0.8rem 1.5rem;">Mobile apps</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Python</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">JavaScript</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">HTML &amp; CSS</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">Django</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">React</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Node.js</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">SQL</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">Git &amp; GitHub</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">REST APIs</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Machine Learning</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">Agile &amp; Scrum</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">UI/UX Design</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Flask</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Mobile apps</li>
     </ul>
   </div>
 
@@ -73,7 +75,7 @@
         <li>SEO optimization</li>
         <li>Mobile-friendly layouts</li>
       </ul>
-      <div class="service-price">From <span>R3,000</span></div>
+      <div class="service-price"> <span></span></div>
     </div>
     <div class="service-card">
       <h3>Web Application Development</h3>
@@ -86,7 +88,7 @@
         <li>User authentication</li>
         <li>Admin dashboards</li>
       </ul>
-      <div class="service-price">From <span>R7,500</span></div>
+      <div class="service-price"><span></span></div>
     </div>
     <div class="service-card">
       <h3>Mobile Application Development</h3>
@@ -99,7 +101,7 @@
         <li>App store deployment</li>
         <li>Push notifications</li>
       </ul>
-      <div class="service-price">From <span>R14,000</span></div>
+      <div class="service-price"> <span></span></div>
     </div>
     <div class="service-card">
       <h3>Other Tech Solutions</h3>
@@ -121,29 +123,29 @@
 <!-- ...existing code... -->
 
 <!-- Project Links Section -->
-<div class="project-links" style="max-width:700px; margin:2rem auto 1.5rem auto; background:#181818; border-radius:20px; padding:2rem; color:#fff; box-shadow:0 2px 16px rgba(0,0,0,0.2); text-align:center;">
-  <h2 style="color:#FFD700;">Featured Project Demos</h2>
-  <a href="https://jubaskillsdevelopment.onrender.com/login" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#FFD700; font-size:1.15rem; font-weight:bold; text-decoration:none;">
+<div class="project-links" style="max-width:700px; margin:2rem auto 1.5rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); text-align:center; border: 1px solid #e9ecef;">
+  <h2 style="color:#2c2c2c;">Featured Project Demos</h2>
+  <a href="https://jubaskillsdevelopment.onrender.com/login" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#3498db; font-size:1.15rem; font-weight:bold; text-decoration:none; transition: color 0.3s;">
     JubaSkillsDevelopment Live Demo
   </a>
-  <a href="https://corundum.onrender.com/facilitator/email/group" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#FFD700; font-size:1.15rem; font-weight:bold; text-decoration:none;">
+  <a href="https://corundum.onrender.com/facilitator/email/group" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#e74c3c; font-size:1.15rem; font-weight:bold; text-decoration:none; transition: color 0.3s;">
     Corundum Live Demo
   </a>
 </div>
 
 <!-- Project Gallery Slideshow Section -->
-<div class="gallery-slideshow" style="max-width:700px; margin:2rem auto; background:#181818; border-radius:20px; padding:2rem; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
-  <h2 style="color:#FFD700; text-align:center;">Project Gallery</h2>
+<div class="gallery-slideshow" style="max-width:700px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef;">
+  <h2 style="color:#2c2c2c; text-align:center;">Project Gallery</h2>
   <div id="slideShowImages" style="position:relative; max-width:600px; margin:2rem auto;">
-    <img class="slide-img" src="assets/Screenshot (23).png" alt="FaceAttendance" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:block;">
-    <img class="slide-img" src="assets/Screenshot (24).png" alt="JubaSkillsDevelopment" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:none;">
-    <img class="slide-img" src="assets/Screenshot (25).png" alt="Corundum" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:none;">
-    <img class="slide-img" src="assets/Screenshot (26).png" alt="Project LMS" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:none;">
-    <img class="slide-img" src="assets/Screenshot (27).png" alt="Mentor Management" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:none;">
-    <img class="slide-img" src="assets/Screenshot (28).png" alt="Learner Management System" style="width:100%; border-radius:16px; box-shadow:0 2px 16px rgba(0,0,0,0.15); display:none;">
+    <img class="slide-img" src="assets/Screenshot (23).png" alt="FaceAttendance" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:block;">
+    <img class="slide-img" src="assets/Screenshot (24).png" alt="JubaSkillsDevelopment" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
+    <img class="slide-img" src="assets/Screenshot (25).png" alt="Corundum" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
+    <img class="slide-img" src="assets/Screenshot (26).png" alt="Project LMS" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
+    <img class="slide-img" src="assets/Screenshot (27).png" alt="Mentor Management" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
+    <img class="slide-img" src="assets/Screenshot (28).png" alt="Learner Management System" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
     <!-- Slideshow controls -->
-    <button id="prevImg" style="position:absolute;top:50%;left:0;transform:translateY(-50%);background:#FFD700;color:#111;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.8;">&#8592;</button>
-    <button id="nextImg" style="position:absolute;top:50%;right:0;transform:translateY(-50%);background:#FFD700;color:#111;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.8;">&#8594;</button>
+    <button id="prevImg" style="position:absolute;top:50%;left:0;transform:translateY(-50%);background:#e74c3c;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.9;box-shadow:0 2px 8px rgba(231, 76, 60, 0.3);">&#8592;</button>
+    <button id="nextImg" style="position:absolute;top:50%;right:0;transform:translateY(-50%);background:#3498db;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.9;box-shadow:0 2px 8px rgba(52, 152, 219, 0.3);">&#8594;</button>
   </div>
 </div>
 
@@ -184,9 +186,9 @@
     </ul>
   </div>
 
-  <div class="certificates" style="max-width:900px; margin:2rem auto; background:#181818; border-radius:20px; padding:2rem; color:#fff; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
-    <h2 style="color:#FFD700;">Certificates</h2>
-    <ul style="list-style:disc inside;">
+  <div class="certificates" style="max-width:900px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; border-left: 4px solid #2ecc71;">
+    <h2 style="color:#2c2c2c;">Certificates</h2>
+    <ul style="list-style:disc inside; color: #555;">
       <li>NDG Linux Unhatched [Cisco Academy]</li>
       <li>Introduction to Cyber Security [Cisco Academy]</li>
       <li>Fundamentals of Computer Science Security [Cisco Academy]</li>
@@ -203,7 +205,7 @@
 
   <div class="exp-edu">
     <div class="exp">
-      <h2 style="color:#FFD700;">Experience</h2>
+      <h2 style="color:#2ecc71;">Experience</h2>
       <ul>
         <li>JCI Durban Intern</li>
         <li>JCI Mid Year Hackathon Volunteer</li>
@@ -211,7 +213,7 @@
       </ul>
     </div>
     <div class="edu">
-      <h2 style="color:#FFD700;">Education</h2>
+      <h2 style="color:#9b59b6;">Education</h2>
       <ul>
         <li>HC in Information Technology (2021)</li>
         <li>Diploma in Application Development in ICT (2024)</li>
@@ -220,7 +222,7 @@
     </div>
   </div>
 
-  <footer style="background:#000; color:#FFD700; text-align:center; padding:1.5rem 0 1rem 0; font-size:1.1rem; letter-spacing:1px; margin-top:2rem;">
+  <footer style="background:linear-gradient(135deg, #2c2c2c 0%, #34495e 100%); color:#ffffff; text-align:center; padding:1.5rem 0 1rem 0; font-size:1.1rem; letter-spacing:1px; margin-top:2rem;">
     &copy; 2025 Mthunzi Khumalo. All rights reserved.
   </footer>
 </body>

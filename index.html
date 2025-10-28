@@ -9,21 +9,25 @@
   <link rel="icon" href="assets/global2.png" type="image/png">
   <meta name="description" content="Global-Future: Innovative tech solutions, software development, youth empowerment, and the leading school LMS in Africa.">
   <style>
-    /* Example color palette based on a gold/black/white logo */
+    /* Professional color palette: White background with Black, Red, Blue, Green accents */
     body {
-      background: #101014;
-      color: #fff;
+      background: #ffffff;
+      color: #2c2c2c;
     }
     header, .nav-links a {
-      background: #181820;
+      background: #ffffff;
+      border-bottom: 3px solid #e74c3c;
     }
     .nav-links a {
-      color: #FFD700;
-      font-weight: bold;
-      transition: color 0.2s;
+      color: #2c2c2c;
+      font-weight: 600;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
     }
     .nav-links a:hover {
-      color: #fff;
+      color: #e74c3c;
+      border-bottom: 2px solid #e74c3c;
     }
     .logo-img {
       height: 40px;
@@ -31,15 +35,15 @@
       margin-right: 10px;
     }
     .logo-text {
-      color: #FFD700;
+      color: #2c2c2c;
       font-size: 1.5rem;
       font-weight: bold;
       vertical-align: middle;
       letter-spacing: 1px;
     }
     footer {
-      background: #181820;
-      color: #FFD700;
+      background: linear-gradient(135deg, #2c2c2c 0%, #34495e 100%);
+      color: #ffffff;
       text-align: center;
       padding: 1.5rem 0 1rem 0;
       font-size: 1rem;
@@ -53,12 +57,543 @@
       height: 32px;
       margin-bottom: 0.5rem;
     }
+
+    /* 
+    ====================================
+    ANIMATION SECTION CSS - COMMENTED OUT FOR NOW
+    ====================================
+    
+    /* New Animation Showcase Section */
+    /*
+    #animation-showcase {
+      min-height: 500px;
+      background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 30%, #B0E0E6 70%, #F0F8FF 100%);
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid #e74c3c;
+      border-bottom: 4px solid #3498db;
+      perspective: 1000px;
+    }
+
+    .animation-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      max-width: 1400px;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+    }
+
+    /* Ground/Path */
+    /*
+    .ground {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(180deg, #2ecc71 0%, #27ae60 50%, #229954 100%);
+      transform: rotateX(75deg);
+      transform-origin: bottom;
+      z-index: 1;
+    }
+
+    .path {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: linear-gradient(90deg, #95a5a6 0%, #bdc3c7 50%, #95a5a6 100%);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    /* 3D Building with perspective */
+    /*
+    .animation-container .building {
+      position: absolute;
+      right: 6%;
+      bottom: 12%;
+      width: 280px;
+      height: 220px;
+      background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+      border-radius: 12px 12px 0 0;
+      box-shadow: 
+        0 15px 35px rgba(0,0,0,0.4),
+        -20px 0 40px rgba(0,0,0,0.2);
+      z-index: 4;
+      border: 3px solid #2c3e50;
+      transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
+      transform-style: preserve-3d;
+      animation: buildingAppear 2s ease-out;
+    }
+
+    /* Building appear animation */
+    /*
+    @keyframes buildingAppear {
+      0% {
+        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(0.3) translateY(100px);
+        opacity: 0;
+      }
+      50% {
+        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(1.1) translateY(-20px);
+        opacity: 0.8;
+      }
+      100% {
+        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    ====================================
+    END OF COMMENTED ANIMATION CSS
+    ====================================
+    */
+
+    /* 
+    ====================================
+    REST OF ANIMATION CSS - COMMENTED OUT
+    ====================================
+    */
+    /*
+    /* Building sides for 3D effect */
+    /*
+    .building-side {
+      position: absolute;
+      top: 0;
+      right: -25px;
+      width: 25px;
+      height: 100%;
+      background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+      transform: rotateY(90deg);
+      transform-origin: left;
+      border-radius: 0 12px 0 0;
+    }
+
+    .building-top {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      right: 0;
+      height: 25px;
+      background: linear-gradient(135deg, #566573 0%, #34495e 100%);
+      transform: rotateX(90deg);
+      transform-origin: bottom;
+      border-radius: 12px;
+    }
+    */ 
+    
+    /* ALL OTHER ANIMATION STYLES ARE ALSO COMMENTED OUT */
+
+    /* 
+    ====================================
+    ALL REMAINING ANIMATION CSS COMMENTED OUT
+    ====================================
+    This includes:
+    - Building text animations
+    - Window effects  
+    - Student 3D styles
+    - Walking animations
+    - Text overlay effects
+    - All keyframe animations
+    
+    To restore: Remove these comment blocks and uncomment the HTML section above
+    ====================================
+    */
+
     /* Responsive nav */
     @media (max-width: 700px) {
       .logo-img { height: 30px; }
       .logo-text { font-size: 1.1rem; }
       .nav-links { gap: 0.5rem; }
+      
+      .building {
+        width: 120px;
+        height: 90px;
+        right: 5%;
+      }
+      
+      .building::before {
+        font-size: 8px;
+      }
+      
+      .student {
+        width: 20px;
+        height: 40px;
+      }
+      
+      .student-body {
+        width: 14px;
+        height: 20px;
+        bottom: 14px;
+      }
+      
+      .student-head {
+        width: 8px;
+        height: 8px;
+        bottom: 30px;
+      }
     }
+
+      /* Global LMS Section Styles */
+      #global-lms {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        padding: 100px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #global-lms::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
+      }
+
+      .lms-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .lms-header h2 {
+        font-size: 3.5rem;
+        color: #2c2c2c;
+        margin-bottom: 10px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #e74c3c, #3498db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .lms-header h3 {
+        font-size: 2rem;
+        color: #2c2c2c;
+        margin-bottom: 15px;
+        font-weight: 400;
+      }
+
+      .lms-tagline {
+        font-size: 1.3rem;
+        color: #666;
+        font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .lms-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .lms-intro {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 0 20px;
+      }
+
+      .lms-intro h4 {
+        font-size: 2.2rem;
+        color: #2c2c2c;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .lms-intro p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #555;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .lms-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 80px;
+        padding: 40px 20px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #e74c3c;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        color: #666;
+        font-weight: 500;
+      }
+
+      .lms-features {
+        margin-bottom: 80px;
+      }
+
+      .lms-features h4 {
+        text-align: center;
+        font-size: 2.2rem;
+        color: #2c2c2c;
+        margin-bottom: 50px;
+        font-weight: 600;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-left: 4px solid #e74c3c;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      }
+
+      .feature-card:nth-child(2) { border-left-color: #3498db; }
+      .feature-card:nth-child(3) { border-left-color: #2ecc71; }
+      .feature-card:nth-child(4) { border-left-color: #e74c3c; }
+      .feature-card:nth-child(5) { border-left-color: #3498db; }
+      .feature-card:nth-child(6) { border-left-color: #2ecc71; }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .feature-card h5 {
+        font-size: 1.4rem;
+        color: #2c2c2c;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .feature-card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .lms-benefits {
+        margin-bottom: 80px;
+      }
+
+      .lms-benefits h4 {
+        text-align: center;
+        font-size: 2.2rem;
+        color: #2c2c2c;
+        margin-bottom: 50px;
+        font-weight: 600;
+      }
+
+      .benefits-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .benefits-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .benefits-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .benefits-list li:last-child {
+        border-bottom: none;
+      }
+
+      .benefits-list strong {
+        color: #e74c3c;
+        font-weight: 600;
+      }
+
+      .success-story {
+        background: linear-gradient(135deg, #3498db, #2ecc71);
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        position: relative;
+      }
+
+      .success-story h5 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .success-story p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .success-story cite {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        font-weight: 500;
+      }
+
+      .lms-cta {
+        background: linear-gradient(135deg, #2c2c2c, #3c3c3c);
+        color: white;
+        padding: 60px 40px;
+        border-radius: 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .lms-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
+      }
+
+      .cta-content h4 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+
+      .cta-primary, .cta-secondary {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .cta-primary {
+        background: #e74c3c;
+        color: white;
+      }
+
+      .cta-primary:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+      }
+
+      .cta-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid #3498db;
+      }
+
+      .cta-secondary:hover {
+        background: #3498db;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+      }
+
+      .cta-note {
+        font-size: 1rem;
+        opacity: 0.8;
+        margin-top: 20px;
+      }
+
+      /* Responsive Design for LMS Section */
+      @media (max-width: 768px) {
+        .lms-header h2 {
+          font-size: 2.5rem;
+        }
+
+        .lms-header h3 {
+          font-size: 1.5rem;
+        }
+
+        .lms-tagline {
+          font-size: 1.1rem;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .benefits-content {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-primary, .cta-secondary {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .lms-stats {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .stat-number {
+          font-size: 2.2rem;
+        }
+      }
   </style>
 </head>
 <body>
@@ -83,6 +618,71 @@
     <p>Empowering Africa with world-class tech solutions, software, and youth development. <br>Welcome to Global-Future.</p>
     <a href="#contact" class="cta-btn">Get in Touch</a>
   </section>
+
+  <!-- ANIMATION SECTION - COMMENTED OUT FOR NOW
+  <section id="animation-showcase">
+    <div class="animation-container">
+      <!-- Ground and path -->
+      <div class="ground"></div>
+      <div class="path"></div>
+
+      <!-- 3D Building with GLOBAL FUTURE text -->
+      <div class="building">
+        <div class="building-side"></div>
+        <div class="building-top"></div>
+        <div class="building-windows">
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+          <div class="window"></div>
+        </div>
+      </div>
+
+      <!-- Student 1 - Blue uniform -->
+      <div class="student student1">
+        <div class="student-head"></div>
+        <div class="student-body"></div>
+        <div class="backpack"></div>
+        <div class="student-legs">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+      </div>
+
+      <!-- Student 2 - Red uniform -->
+      <div class="student student2">
+        <div class="student-head"></div>
+        <div class="student-body"></div>
+        <div class="backpack"></div>
+        <div class="student-legs">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+      </div>
+
+      <!-- Student 3 - Green uniform -->
+      <div class="student student3">
+        <div class="student-head"></div>
+        <div class="student-body"></div>
+        <div class="backpack"></div>
+        <div class="student-legs">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+      </div>
+
+      <!-- Animated text overlay -->
+     
+  </section>
+  
 
   <section id="about">
     <h2>About Us</h2>
@@ -112,6 +712,112 @@
     </div>
   </section>
 
+  <!-- Global LMS Education Transformation Section -->
+  <section id="global-lms">
+    <div class="lms-header">
+      <h2>Global Future LMS</h2>
+      <h3>Transforming Education Across Africa</h3>
+      <p class="lms-tagline">The continent's most comprehensive school learning management system</p>
+    </div>
+
+    <div class="lms-content">
+      <div class="lms-intro">
+        <h4>Revolutionizing African Education</h4>
+        <p>Global Future LMS is not just a learning platform—it's a complete educational transformation system that's reshaping how schools operate across Africa. Designed specifically for African educational institutions, our platform addresses the unique challenges faced by schools on the continent while providing world-class features that rival any international system.</p>
+      </div>
+
+      <div class="lms-stats">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Schools Connected</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50,000+</div>
+          <div class="stat-label">Active Students</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Educators Empowered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">African Countries</div>
+        </div>
+      </div>
+
+      <div class="lms-features">
+        <h4>Comprehensive Features for Modern Education</h4>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h5>Digital Classroom Management</h5>
+            <p>Complete virtual classrooms with interactive whiteboards, real-time collaboration, and seamless lesson delivery—even with limited internet connectivity.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h5>Advanced Analytics & Reporting</h5>
+            <p>Detailed insights into student performance, attendance tracking, and predictive analytics to identify at-risk students before they fall behind.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+            <h5>Parent-School Communication</h5>
+            <p>Real-time updates, progress reports, and direct messaging between parents and teachers, fostering stronger school-home partnerships.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h5>Mobile-First Design</h5>
+            <p>Fully responsive platform optimized for smartphones and tablets, ensuring accessibility for students and parents across all economic backgrounds.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h5>Multi-Language Support</h5>
+            <p>Available in English, Afrikaans, Zulu, Xhosa, and other African languages, making education truly accessible to all communities.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💾</div>
+            <h5>Offline Capabilities</h5>
+            <p>Unique offline mode that synchronizes when connection is available—perfect for areas with unreliable internet infrastructure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lms-benefits">
+        <h4>Why Schools Choose Global Future LMS</h4>
+        <div class="benefits-content">
+          <div class="benefit-text">
+            <ul class="benefits-list">
+              <li><strong>Cost-Effective:</strong> 80% more affordable than international competitors while offering superior local support</li>
+              <li><strong>Quick Implementation:</strong> Schools are fully operational within 48 hours of setup</li>
+              <li><strong>Local Support:</strong> Dedicated African support team available in multiple time zones and languages</li>
+              <li><strong>Scalable:</strong> From 50-student rural schools to 5,000+ student urban institutions</li>
+              <li><strong>Secure:</strong> Bank-level security with data hosted on African servers for faster access</li>
+              <li><strong>Integration Ready:</strong> Seamlessly connects with existing school systems and government databases</li>
+            </ul>
+          </div>
+          <div class="benefit-visual">
+            <div class="success-story">
+              <h5>"Game-Changing for Our School"</h5>
+              <p>"Global Future LMS transformed how we operate. Our parent engagement is increasing, and student performance and focus is improving in just one semester."</p>
+              <cite>— Miss T.Khumalo</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lms-cta">
+        <div class="cta-content">
+          <h4>Ready to Transform Your School?</h4>
+          <p>Join hundreds of progressive schools across Africa who are already using Global Future LMS to deliver exceptional education outcomes.</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="cta-primary">Request Free Demo</a>
+            <a href="#contact" class="cta-secondary">Download Brochure</a>
+          </div>
+          <p class="cta-note">✓ Free 30-day trial &nbsp; ✓ No setup fees &nbsp; ✓ 24/7 African support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="founder">
     <a href="portfolio.htm" target="_blank" title="View Mthunzi's Portfolio">
       <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo" class="founder-img">
@@ -126,8 +832,8 @@
   <section id="contact">
     <div class="contact-info">
       <h2>Contact Us</h2>
-      <p><b>Address:</b> 79 Maud Mfusi Street, Durban Central, South Africa</p>
-      <p><b>Email:</b> mthunziapplications@gmail.com</p>
+      <p><b>📍:</b> Find us in South Africa</p>
+      <p><b>Email:</b> globalfuturecomm@gmail.com</p>
       <p><b>Phone:</b> +27 60 682 5110</p>
       <p>Follow us on <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" style="color:#FFD700;">LinkedIn</a> | <a href="" style="color:#FFD700;">Twitter</a></p>
     </div>
