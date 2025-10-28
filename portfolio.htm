@@ -18,6 +18,25 @@
     .exp, .edu { flex: 1 1 300px; background: #ffffff; border-radius: 20px; padding: 2rem; color: #2c2c2c; box-shadow: 0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
     .exp { border-left: 4px solid #2ecc71; }
     .edu { border-left: 4px solid #9b59b6; }
+    
+    /* Enhanced Professional Expertise Cards */
+    .service-card:nth-child(1) { border-left: 4px solid #e74c3c; }
+    .service-card:nth-child(2) { border-left: 4px solid #3498db; }
+    .service-card:nth-child(3) { border-left: 4px solid #2ecc71; }
+    .service-card:nth-child(4) { border-left: 4px solid #9b59b6; }
+    .service-card:nth-child(5) { border-left: 4px solid #f39c12; }
+    .service-card:nth-child(6) { border-left: 4px solid #1abc9c; }
+    
+    .service-card .service-price {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight: 600;
+      color: #2c2c2c;
+      border: 1px solid #dee2e6;
+      display: inline-block;
+    }
+    
     @media (max-width: 900px) { .exp-edu { flex-direction: column; } }
   </style>
 </head>
@@ -25,7 +44,7 @@
   <div class="portfolio-header">
     <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo" class="portfolio-img">
     <h1>Mthunzi Khumalo</h1>
-    <h3>Tech-Driven Innovator | Software developer | </h3>
+    <h3>Full-Stack Developer | Cloud Solutions Expert | Data Analyst | Available for Hire</h3>
     <div class="portfolio-contacts">
       ||<span> 060 682 5110</span> || <br>||
       <a href="mailto:mthunziapplications@gmail.com" style="color: #3498db;">mthunziapplications@gmail.com</a>  ||<br>||
@@ -36,8 +55,10 @@
 
   <div class="bio">
     <p>
-      I am a passionate software developer and an aspiring entrepreneur, driven by a vision to use technology for positive change in Africa, and beyond.  I have led teams to build impactful solutions in education, business, and youth development. My journey is defined by a commitment to innovation, continuous learning, and empowering others to achieve their potential in the digital world.
+      I am a passionate full-stack software developer and tech entrepreneur with 5+ years of experience building impactful digital solutions. Currently seeking opportunities to contribute my expertise in web development, mobile applications, cloud computing, and data analysis to forward-thinking organizations. My proven track record includes leading the development of Africa's largest school LMS and delivering scalable solutions for education, business, and youth development sectors.
     </p>
+    <p style="margin-top: 1rem; font-weight: 600; color: #e74c3c;">
+      </p>
   </div>
 
   <div class="skills" style="max-width:900px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef;">
@@ -51,8 +72,8 @@
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Node.js</li>
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">SQL</li>
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">Git &amp; GitHub</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">REST APIs</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Machine Learning</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Azure</li>
+      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Firebase</li>
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">Agile &amp; Scrum</li>
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">UI/UX Design</li>
       <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Flask</li>
@@ -62,59 +83,106 @@
 
   <!-- ...existing code... -->
 <section id="services" class="portfolio-services">
-  <h2>My Services</h2>
+  <h2>My Professional Expertise</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto; color: #555; font-size: 1.1rem;">
+    As a versatile software developer and tech professional, I bring comprehensive expertise across multiple domains. 
+    Here's what I can contribute to your organization:
+  </p>
   <div class="services-grid">
     <div class="service-card">
-      <h3>Website Development</h3>
+      <h3>Full-Stack Web Development</h3>
       <p>
-        <b>What is it?</b> <br>
-        A website is your digital storefront, accessible from anywhere in the world. I build modern, responsive websites for individuals, companies, and schools, tailored to your brand and needs.
+        <b>My Expertise:</b> <br>
+        Experienced in building end-to-end web solutions using modern technologies. Proficient in both frontend and backend development with a focus on scalable, user-friendly applications.
       </p>
       <ul>
-        <li>Custom design & development</li>
-        <li>SEO optimization</li>
-        <li>Mobile-friendly layouts</li>
+        <li>React, JavaScript, HTML5/CSS3</li>
+        <li>Python Django, Node.js backends</li>
+        <li>Database design (SQL, MongoDB)</li>
+        <li>RESTful APIs & integrations</li>
+        <li>Responsive design principles</li>
       </ul>
-      <div class="service-price"> <span></span></div>
+      <div class="service-price"></div>
     </div>
-    <div class="service-card">
-      <h3>Web Application Development</h3>
-      <p>
-        <b>What is it?</b> <br>
-        A web application is an interactive online platform (like a school LMS, booking system, or dashboard) that users can access via a browser. I create secure, scalable web apps for any business need.
-      </p>
-      <ul>
-        <li>Custom features & integrations</li>
-        <li>User authentication</li>
-        <li>Admin dashboards</li>
-      </ul>
-      <div class="service-price"><span></span></div>
-    </div>
+    
     <div class="service-card">
       <h3>Mobile Application Development</h3>
       <p>
-        <b>What is it?</b> <br>
-        Mobile apps run on smartphones and tablets, offering users a seamless experience on the go. I develop Android and iOS apps for businesses, schools, and startups.
+        <b>My Expertise:</b> <br>
+        Skilled in developing cross-platform mobile applications for both Android and iOS. Experience with native development and hybrid frameworks for diverse business needs.
       </p>
       <ul>
-        <li>Native & cross-platform apps</li>
+        <li>React Native development</li>
+        <li>Flutter cross-platform apps</li>
+        <li>Native Android (Java/Kotlin)</li>
         <li>App store deployment</li>
-        <li>Push notifications</li>
+        <li>Mobile UI/UX optimization</li>
       </ul>
-      <div class="service-price"> <span></span></div>
+      <div class="service-price"></div>
     </div>
+    
     <div class="service-card">
-      <h3>Other Tech Solutions</h3>
+      <h3>Cloud Computing </h3>
       <p>
-        <b>What is it?</b> <br>
-        I offer a wide range of tech services including IT consulting, system integration, automation, and digital transformation for businesses and schools.
+        <b>My Expertise:</b> <br>
+        Intermediate-level proficiency in major cloud platforms. Experienced in deploying, scaling, and managing applications in cloud environments with focus on cost-efficiency and reliability.
       </p>
       <ul>
-        <li>IT support & consulting</li>
-        <li>System integration</li>
-        <li>Automation solutions</li>
+        <li>Azure cloud services & deployment</li>
+        <li>AWS EC2, S3, Lambda functions</li>
+        <li>Firebase real-time databases</li>
+        <li>Docker containerization</li>
+        <li>CI/CD pipeline setup</li>
       </ul>
-      <div class="service-price">Contact for Quote</div>
+      <div class="service-price">Intermediate Level</div>
+    </div>
+    
+    <div class="service-card">
+      <h3>Data Analysis & Insights</h3>
+      <p>
+        <b>My Expertise:</b> <br>
+        Proficient in extracting meaningful insights from data using statistical analysis and visualization tools. Experience in building data-driven solutions for business intelligence.
+      </p>
+      <ul>
+        <li>Python (Pandas, NumPy, Matplotlib)</li>
+        <li>SQL data querying & analysis</li>
+        <li>Data visualization dashboards</li>
+        <li>Statistical analysis & reporting</li>
+        <li>Machine learning fundamentals</li>
+      </ul>
+      <div class="service-price"></div>
+    </div>
+    
+    <div class="service-card">
+      <h3>Educational Technology Solutions</h3>
+      <p>
+        <b>My Expertise:</b> <br>
+        Specialized in developing learning management systems and educational platforms. Deep understanding of educational workflows and student-teacher-parent ecosystems.
+      </p>
+      <ul>
+        <li>LMS development & customization</li>
+        <li>Educational software design</li>
+        <li>Student management systems</li>
+        <li>Assessment & grading tools</li>
+        <li>Parent-school communication platforms</li>
+      </ul>
+      <div class="service-price">Specialized Domain</div>
+    </div>
+    
+    <div class="service-card">
+      <h3>Project Management & Leadership</h3>
+      <p>
+        <b>My Expertise:</b> <br>
+        Proven track record in leading development teams and managing technical projects from conception to deployment. Strong communication and problem-solving skills.
+      </p>
+      <ul>
+        <li>Agile & Scrum methodologies</li>
+        <li>Team leadership & mentoring</li>
+        <li>Technical documentation</li>
+        <li>Client communication & requirements gathering</li>
+        <li>Quality assurance & testing</li>
+      </ul>
+      <div class="service-price">Leadership Ready</div>
     </div>
   </div>
 </section>
