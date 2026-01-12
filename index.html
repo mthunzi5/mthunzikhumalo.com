@@ -3,848 +3,386 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global-Future | Tech Solutions</title>
+  <title>Global-Future | Tech Solutions & Education</title>
   <link rel="stylesheet" href="assets/style.css">
-  <!-- Updated favicon to use your new logo -->
   <link rel="icon" href="assets/global2.png" type="image/png">
   <meta name="description" content="Global-Future: Innovative tech solutions, software development, youth empowerment, and the leading school LMS in Africa.">
-  <style>
-    /* Professional color palette: White background with Black, Red, Blue, Green accents */
-    body {
-      background: #ffffff;
-      color: #2c2c2c;
-    }
-    header, .nav-links a {
-      background: #ffffff;
-      border-bottom: 3px solid #e74c3c;
-    }
-    .nav-links a {
-      color: #2c2c2c;
-      font-weight: 600;
-      transition: color 0.3s, border-bottom 0.3s;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 5px;
-    }
-    .nav-links a:hover {
-      color: #e74c3c;
-      border-bottom: 2px solid #e74c3c;
-    }
-    .logo-img {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    .logo-text {
-      color: #2c2c2c;
-      font-size: 1.5rem;
-      font-weight: bold;
-      vertical-align: middle;
-      letter-spacing: 1px;
-    }
-    footer {
-      background: linear-gradient(135deg, #2c2c2c 0%, #34495e 100%);
-      color: #ffffff;
-      text-align: center;
-      padding: 1.5rem 0 1rem 0;
-      font-size: 1rem;
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .footer-logo {
-      height: 32px;
-      margin-bottom: 0.5rem;
-    }
-
-    /* 
-    ====================================
-    ANIMATION SECTION CSS - COMMENTED OUT FOR NOW
-    ====================================
-    
-    /* New Animation Showcase Section */
-    /*
-    #animation-showcase {
-      min-height: 500px;
-      background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 30%, #B0E0E6 70%, #F0F8FF 100%);
-      position: relative;
-      overflow: hidden;
-      border-top: 4px solid #e74c3c;
-      border-bottom: 4px solid #3498db;
-      perspective: 1000px;
-    }
-
-    .animation-container {
-      position: relative;
-      width: 100%;
-      height: 500px;
-      max-width: 1400px;
-      margin: 0 auto;
-      transform-style: preserve-3d;
-    }
-
-    /* Ground/Path */
-    /*
-    .ground {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 80px;
-      background: linear-gradient(180deg, #2ecc71 0%, #27ae60 50%, #229954 100%);
-      transform: rotateX(75deg);
-      transform-origin: bottom;
-      z-index: 1;
-    }
-
-    .path {
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      right: 0;
-      height: 20px;
-      background: linear-gradient(90deg, #95a5a6 0%, #bdc3c7 50%, #95a5a6 100%);
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 2;
-    }
-
-    /* 3D Building with perspective */
-    /*
-    .animation-container .building {
-      position: absolute;
-      right: 6%;
-      bottom: 12%;
-      width: 280px;
-      height: 220px;
-      background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-      border-radius: 12px 12px 0 0;
-      box-shadow: 
-        0 15px 35px rgba(0,0,0,0.4),
-        -20px 0 40px rgba(0,0,0,0.2);
-      z-index: 4;
-      border: 3px solid #2c3e50;
-      transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
-      transform-style: preserve-3d;
-      animation: buildingAppear 2s ease-out;
-    }
-
-    /* Building appear animation */
-    /*
-    @keyframes buildingAppear {
-      0% {
-        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(0.3) translateY(100px);
-        opacity: 0;
-      }
-      50% {
-        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(1.1) translateY(-20px);
-        opacity: 0.8;
-      }
-      100% {
-        transform: perspective(800px) rotateY(-15deg) rotateX(5deg) scale(1) translateY(0);
-        opacity: 1;
-      }
-    }
-    
-    ====================================
-    END OF COMMENTED ANIMATION CSS
-    ====================================
-    */
-
-    /* 
-    ====================================
-    REST OF ANIMATION CSS - COMMENTED OUT
-    ====================================
-    */
-    /*
-    /* Building sides for 3D effect */
-    /*
-    .building-side {
-      position: absolute;
-      top: 0;
-      right: -25px;
-      width: 25px;
-      height: 100%;
-      background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-      transform: rotateY(90deg);
-      transform-origin: left;
-      border-radius: 0 12px 0 0;
-    }
-
-    .building-top {
-      position: absolute;
-      top: -25px;
-      left: 0;
-      right: 0;
-      height: 25px;
-      background: linear-gradient(135deg, #566573 0%, #34495e 100%);
-      transform: rotateX(90deg);
-      transform-origin: bottom;
-      border-radius: 12px;
-    }
-    */ 
-    
-    /* ALL OTHER ANIMATION STYLES ARE ALSO COMMENTED OUT */
-
-    /* 
-    ====================================
-    ALL REMAINING ANIMATION CSS COMMENTED OUT
-    ====================================
-    This includes:
-    - Building text animations
-    - Window effects  
-    - Student 3D styles
-    - Walking animations
-    - Text overlay effects
-    - All keyframe animations
-    
-    To restore: Remove these comment blocks and uncomment the HTML section above
-    ====================================
-    */
-
-    /* Responsive nav */
-    @media (max-width: 700px) {
-      .logo-img { height: 30px; }
-      .logo-text { font-size: 1.1rem; }
-      .nav-links { gap: 0.5rem; }
-      
-      .building {
-        width: 120px;
-        height: 90px;
-        right: 5%;
-      }
-      
-      .building::before {
-        font-size: 8px;
-      }
-      
-      .student {
-        width: 20px;
-        height: 40px;
-      }
-      
-      .student-body {
-        width: 14px;
-        height: 20px;
-        bottom: 14px;
-      }
-      
-      .student-head {
-        width: 8px;
-        height: 8px;
-        bottom: 30px;
-      }
-    }
-
-      /* Global LMS Section Styles */
-      #global-lms {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 100px 20px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      #global-lms::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
-      }
-
-      .lms-header {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-
-      .lms-header h2 {
-        font-size: 3.5rem;
-        color: #2c2c2c;
-        margin-bottom: 10px;
-        font-weight: 700;
-        background: linear-gradient(135deg, #e74c3c, #3498db);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .lms-header h3 {
-        font-size: 2rem;
-        color: #2c2c2c;
-        margin-bottom: 15px;
-        font-weight: 400;
-      }
-
-      .lms-tagline {
-        font-size: 1.3rem;
-        color: #666;
-        font-style: italic;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      .lms-content {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .lms-intro {
-        text-align: center;
-        margin-bottom: 60px;
-        padding: 0 20px;
-      }
-
-      .lms-intro h4 {
-        font-size: 2.2rem;
-        color: #2c2c2c;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-
-      .lms-intro p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #555;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .lms-stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-        margin-bottom: 80px;
-        padding: 40px 20px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-
-      .stat-item {
-        text-align: center;
-        padding: 20px;
-      }
-
-      .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        color: #e74c3c;
-        margin-bottom: 8px;
-        display: block;
-      }
-
-      .stat-label {
-        font-size: 1.1rem;
-        color: #666;
-        font-weight: 500;
-      }
-
-      .lms-features {
-        margin-bottom: 80px;
-      }
-
-      .lms-features h4 {
-        text-align: center;
-        font-size: 2.2rem;
-        color: #2c2c2c;
-        margin-bottom: 50px;
-        font-weight: 600;
-      }
-
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-        padding: 0 20px;
-      }
-
-      .feature-card {
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        border-left: 4px solid #e74c3c;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-      }
-
-      .feature-card:nth-child(2) { border-left-color: #3498db; }
-      .feature-card:nth-child(3) { border-left-color: #2ecc71; }
-      .feature-card:nth-child(4) { border-left-color: #e74c3c; }
-      .feature-card:nth-child(5) { border-left-color: #3498db; }
-      .feature-card:nth-child(6) { border-left-color: #2ecc71; }
-
-      .feature-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        display: block;
-      }
-
-      .feature-card h5 {
-        font-size: 1.4rem;
-        color: #2c2c2c;
-        margin-bottom: 15px;
-        font-weight: 600;
-      }
-
-      .feature-card p {
-        color: #666;
-        line-height: 1.6;
-        font-size: 1rem;
-      }
-
-      .lms-benefits {
-        margin-bottom: 80px;
-      }
-
-      .lms-benefits h4 {
-        text-align: center;
-        font-size: 2.2rem;
-        color: #2c2c2c;
-        margin-bottom: 50px;
-        font-weight: 600;
-      }
-
-      .benefits-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: center;
-      }
-
-      .benefits-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .benefits-list li {
-        padding: 15px 0;
-        border-bottom: 1px solid #eee;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #555;
-      }
-
-      .benefits-list li:last-child {
-        border-bottom: none;
-      }
-
-      .benefits-list strong {
-        color: #e74c3c;
-        font-weight: 600;
-      }
-
-      .success-story {
-        background: linear-gradient(135deg, #3498db, #2ecc71);
-        color: white;
-        padding: 40px;
-        border-radius: 15px;
-        text-align: center;
-        position: relative;
-      }
-
-      .success-story h5 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-
-      .success-story p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        font-style: italic;
-      }
-
-      .success-story cite {
-        font-size: 0.95rem;
-        opacity: 0.9;
-        font-weight: 500;
-      }
-
-      .lms-cta {
-        background: linear-gradient(135deg, #2c2c2c, #3c3c3c);
-        color: white;
-        padding: 60px 40px;
-        border-radius: 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .lms-cta::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
-      }
-
-      .cta-content h4 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-
-      .cta-content p {
-        font-size: 1.2rem;
-        margin-bottom: 40px;
-        opacity: 0.9;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-      }
-
-      .cta-primary, .cta-secondary {
-        padding: 15px 35px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-
-      .cta-primary {
-        background: #e74c3c;
-        color: white;
-      }
-
-      .cta-primary:hover {
-        background: #c0392b;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
-      }
-
-      .cta-secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid #3498db;
-      }
-
-      .cta-secondary:hover {
-        background: #3498db;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
-      }
-
-      .cta-note {
-        font-size: 1rem;
-        opacity: 0.8;
-        margin-top: 20px;
-      }
-
-      /* Responsive Design for LMS Section */
-      @media (max-width: 768px) {
-        .lms-header h2 {
-          font-size: 2.5rem;
-        }
-
-        .lms-header h3 {
-          font-size: 1.5rem;
-        }
-
-        .lms-tagline {
-          font-size: 1.1rem;
-        }
-
-        .features-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        .benefits-content {
-          grid-template-columns: 1fr;
-          gap: 30px;
-        }
-
-        .cta-buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .cta-primary, .cta-secondary {
-          width: 100%;
-          max-width: 300px;
-        }
-
-        .lms-stats {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-
-        .stat-number {
-          font-size: 2.2rem;
-        }
-      }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navigation Header -->
   <header>
-    <nav style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 2vw;">
-      <div class="logo">
+    <nav class="navbar">
+      <div class="logo-container">
         <img src="assets/global2.png" alt="Global-Future Logo" class="logo-img">
         <span class="logo-text">Global-Future</span>
       </div>
-      <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; margin: 0;">
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#lms-gateway">Global LMS</a></li>
+        <li><a href="#signup">Sign Up</a></li>
         <li><a href="#founder">Founder</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="hero">
-    <h1>Innovating the Future, Today</h1>
-    <p>Empowering Africa with world-class tech solutions, software, and youth development. <br>Welcome to Global-Future.</p>
-    <a href="#contact" class="cta-btn">Get in Touch</a>
+  <!-- Hero Section - Enhanced Landing -->
+  <section id="hero" class="hero-section">
+    <div class="hero-background">
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Innovating the Future, Today</h1>
+        <p class="hero-subtitle">Empowering Africa with world-class tech solutions, software development, and education transformation</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="cta-btn cta-primary">Get Started</a>
+          <a href="#about" class="cta-btn cta-secondary">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">500+</span>
+            <span class="stat-label">Schools</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">50K+</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">15+</span>
+            <span class="stat-label">Countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </section>
 
-  <!-- ANIMATION SECTION - COMMENTED OUT FOR NOW
-  <section id="animation-showcase">
-    <div class="animation-container">
-      <!-- Ground and path -->
-      <div class="ground"></div>
-      <div class="path"></div>
-
-      <!-- 3D Building with GLOBAL FUTURE text -->
-      <div class="building">
-        <div class="building-side"></div>
-        <div class="building-top"></div>
-        <div class="building-windows">
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
-          <div class="window"></div>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-header">
+      <h2>About Global-Future</h2>
+      <p class="section-subtitle">Building Tomorrow's Solutions Today</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Global-Future is a dynamic tech company founded by <strong>Mthunzi Khumalo</strong> in Durban, South Africa. We specialize in delivering innovative software solutions for businesses, developing cutting-edge technology for education, and empowering the next generation of tech leaders.</p>
+        <p>Our flagship product, the <strong>Global Future LMS</strong>, is the continent's most comprehensive school learning management system, transforming education for thousands of learners and educators across Africa.</p>
+        <p>We are passionate about using technology to solve real-world problems, drive business growth, and create opportunities for youth development across the continent.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <p>Bridge the digital divide and empower African communities through innovative technology</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Our Vision</h3>
+          <p>Be the leading tech solutions provider transforming education and business in Africa</p>
+        </div>
+        <div class="highlight-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Our Values</h3>
+          <p>Innovation, Excellence, Integrity, and Community-focused Development</p>
         </div>
       </div>
-
-      <!-- Student 1 - Blue uniform -->
-      <div class="student student1">
-        <div class="student-head"></div>
-        <div class="student-body"></div>
-        <div class="backpack"></div>
-        <div class="student-legs">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-      <!-- Student 2 - Red uniform -->
-      <div class="student student2">
-        <div class="student-head"></div>
-        <div class="student-body"></div>
-        <div class="backpack"></div>
-        <div class="student-legs">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-      <!-- Student 3 - Green uniform -->
-      <div class="student student3">
-        <div class="student-head"></div>
-        <div class="student-body"></div>
-        <div class="backpack"></div>
-        <div class="student-legs">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-      <!-- Animated text overlay -->
-     
-  </section>
-  
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Global-Future is a dynamic tech company founded by <b>Mthunzi Khumalo</b> in Durban, South Africa. We specialize in delivering innovative software solutions for businesses, developing cutting-edge technology for education, and empowering the next generation of tech leaders. Our flagship product, the Global Future LMS, is the largest school learning management system in Africa, transforming education for thousands of learners and educators.</p>
-    <p>We are passionate about using technology to solve real-world problems, drive business growth, and create opportunities for youth development across the continent.</p>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services-list">
-      <div class="service">
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Comprehensive Solutions for Modern Challenges</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
         <h3>Software Development</h3>
-        <p>Custom web, mobile, and enterprise software for companies of all sizes. We turn your ideas into robust, scalable solutions.</p>
+        <p>Custom web, mobile, and enterprise software tailored to your business needs. We turn innovative ideas into robust, scalable solutions.</p>
+        <ul class="service-highlights">
+          <li><i class="fas fa-check"></i> Web Applications</li>
+          <li><i class="fas fa-check"></i> Mobile Apps</li>
+          <li><i class="fas fa-check"></i> Enterprise Systems</li>
+        </ul>
       </div>
-      <div class="service">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-wrench"></i>
+        </div>
         <h3>Tech Solutions</h3>
-        <p>From cloud migration to automation, we help businesses leverage the latest technology to stay ahead in a digital world.</p>
+        <p>From cloud migration to automation and digital transformation. We help businesses leverage cutting-edge technology to stay competitive.</p>
+        <ul class="service-highlights">
+          <li><i class="fas fa-check"></i> Cloud Services</li>
+          <li><i class="fas fa-check"></i> Automation</li>
+          <li><i class="fas fa-check"></i> Digital Transformation</li>
+        </ul>
       </div>
-      <div class="service">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-users"></i>
+        </div>
         <h3>Youth Development</h3>
-        <p>Training, mentorship, and  programs to empower young people with digital skills for the future.</p>
+        <p>Training, mentorship, and development programs to empower young people with digital skills for the future.</p>
+        <ul class="service-highlights">
+          <li><i class="fas fa-check"></i> Tech Training</li>
+          <li><i class="fas fa-check"></i> Mentorship</li>
+          <li><i class="fas fa-check"></i> Career Development</li>
+        </ul>
       </div>
-      <div class="service">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-book"></i>
+        </div>
         <h3>Global Future LMS</h3>
-        <p>The growing school learning management system in Africa, connecting students, teachers, and parents for better education outcomes.</p>
+        <p>Africa's most comprehensive learning management system, connecting students, teachers, and parents for exceptional education outcomes.</p>
+        <ul class="service-highlights">
+          <li><i class="fas fa-check"></i> School Management</li>
+          <li><i class="fas fa-check"></i> Student Analytics</li>
+          <li><i class="fas fa-check"></i> Parent Engagement</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Global LMS Education Transformation Section -->
-  <section id="global-lms">
-    <div class="lms-header">
-      <h2>Global Future LMS</h2>
-      <h3>Transforming Education Across Africa</h3>
-      <p class="lms-tagline">The continent's most comprehensive school learning management system</p>
+  <!-- Global LMS Gateway Section - Friendly Link to LMS -->
+  <section id="lms-gateway" class="lms-gateway-section">
+    <div class="lms-gateway-container">
+      <div class="gateway-header">
+        <h2>Experience Our Global LMS Platform</h2>
+        <p class="gateway-subtitle">Join schools across Africa revolutionizing education</p>
+      </div>
+      <div class="gateway-content">
+        <div class="gateway-intro">
+          <h3>Welcome to Education's Future</h3>
+          <p>Our Global Future LMS is more than just a platform—it's a complete educational transformation system. Whether you're an educator looking to enhance your teaching, a student seeking an engaging learning experience, or a parent wanting to stay connected with your child's education, our platform is designed for you.</p>
+        </div>
+        <div class="gateway-features">
+          <div class="gateway-feature">
+            <span class="feature-icon">
+              <i class="fas fa-chalkboard-user"></i>
+            </span>
+            <h4>For Teachers</h4>
+            <p>Interactive classrooms, real-time student insights, and streamlined grading</p>
+          </div>
+          <div class="gateway-feature">
+            <span class="feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </span>
+            <h4>For Students</h4>
+            <p>Engaging learning materials, progress tracking, and collaborative tools</p>
+          </div>
+          <div class="gateway-feature">
+            <span class="feature-icon">
+              <i class="fas fa-family"></i>
+            </span>
+            <h4>For Parents</h4>
+            <p>Real-time updates, progress reports, and direct teacher communication</p>
+          </div>
+          <div class="gateway-feature">
+            <span class="feature-icon">
+              <i class="fas fa-school"></i>
+            </span>
+            <h4>For Schools</h4>
+            <p>Complete school management, analytics, and administrative tools</p>
+          </div>
+        </div>
+        <div class="gateway-cta">
+          <h3>Ready to Transform Your School?</h3>
+          <p>Access our Global LMS platform and join hundreds of schools across Africa delivering exceptional education outcomes.</p>
+          <div class="gateway-buttons">
+            <a href="https://global-lms-483720.uc.r.appspot.com/" target="_blank" class="btn-primary">
+              <i class="fas fa-external-link-alt"></i> Access Global LMS
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <i class="fas fa-calendar-check"></i> Request Demo
+            </a>
+          </div>
+          <p class="gateway-note">
+            <i class="fas fa-check-circle"></i> Free 30-day trial &nbsp;
+            <i class="fas fa-check-circle"></i> No setup fees &nbsp;
+            <i class="fas fa-check-circle"></i> 24/7 Support
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="lms-content">
-      <div class="lms-intro">
-        <h4>Revolutionizing African Education</h4>
-        <p>Global Future LMS is not just a learning platform—it's a complete educational transformation system that's reshaping how schools operate across Africa. Designed specifically for African educational institutions, our platform addresses the unique challenges faced by schools on the continent while providing world-class features that rival any international system.</p>
+  <!-- Sign Up Section -->
+  <section id="signup" class="signup-section">
+    <div class="signup-container">
+      <div class="signup-header">
+        <h2>
+          <i class="fas fa-user-plus"></i> Join Our Global Community
+        </h2>
+        <p class="section-subtitle">Create your account and start your journey with Global Future LMS</p>
       </div>
+      
+      <div class="signup-content">
+        <div class="signup-intro">
+          <h3>What Happens When You Sign Up?</h3>
+          <p>Our platform is designed to accommodate different types of users, each with tailored features and capabilities. Choose the account type that best fits your needs:</p>
+        </div>
 
-      <div class="lms-stats">
-        <div class="stat-item">
-          <div class="stat-number">500+</div>
-          <div class="stat-label">Schools Connected</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">50,000+</div>
-          <div class="stat-label">Active Students</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">5,000+</div>
-          <div class="stat-label">Educators Empowered</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">African Countries</div>
-        </div>
-      </div>
-
-      <div class="lms-features">
-        <h4>Comprehensive Features for Modern Education</h4>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">📚</div>
-            <h5>Digital Classroom Management</h5>
-            <p>Complete virtual classrooms with interactive whiteboards, real-time collaboration, and seamless lesson delivery—even with limited internet connectivity.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h5>Advanced Analytics & Reporting</h5>
-            <p>Detailed insights into student performance, attendance tracking, and predictive analytics to identify at-risk students before they fall behind.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">👨‍👩‍👧‍👦</div>
-            <h5>Parent-School Communication</h5>
-            <p>Real-time updates, progress reports, and direct messaging between parents and teachers, fostering stronger school-home partnerships.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📱</div>
-            <h5>Mobile-First Design</h5>
-            <p>Fully responsive platform optimized for smartphones and tablets, ensuring accessibility for students and parents across all economic backgrounds.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🌍</div>
-            <h5>Multi-Language Support</h5>
-            <p>Available in English, Afrikaans, Zulu, Xhosa, and other African languages, making education truly accessible to all communities.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💾</div>
-            <h5>Offline Capabilities</h5>
-            <p>Unique offline mode that synchronizes when connection is available—perfect for areas with unreliable internet infrastructure.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="lms-benefits">
-        <h4>Why Schools Choose Global Future LMS</h4>
-        <div class="benefits-content">
-          <div class="benefit-text">
-            <ul class="benefits-list">
-              <li><strong>Cost-Effective:</strong> 80% more affordable than international competitors while offering superior local support</li>
-              <li><strong>Quick Implementation:</strong> Schools are fully operational within 48 hours of setup</li>
-              <li><strong>Local Support:</strong> Dedicated African support team available in multiple time zones and languages</li>
-              <li><strong>Scalable:</strong> From 50-student rural schools to 5,000+ student urban institutions</li>
-              <li><strong>Secure:</strong> Bank-level security with data hosted on African servers for faster access</li>
-              <li><strong>Integration Ready:</strong> Seamlessly connects with existing school systems and government databases</li>
+        <div class="signup-types">
+          <div class="signup-type-card">
+            <div class="signup-type-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h4>School Registration</h4>
+            <p>Perfect for educational institutions looking to manage their entire school operations digitally.</p>
+            <ul class="signup-type-features">
+              <li><i class="fas fa-check"></i> Complete school administration dashboard</li>
+              <li><i class="fas fa-check"></i> Manage teachers, students, and classes</li>
+              <li><i class="fas fa-check"></i> Track academic performance and attendance</li>
+              <li><i class="fas fa-check"></i> Generate reports and analytics</li>
+              <li><i class="fas fa-check"></i> Parent-teacher communication portal</li>
             </ul>
           </div>
-          <div class="benefit-visual">
-            <div class="success-story">
-              <h5>"Game-Changing for Our School"</h5>
-              <p>"Global Future LMS transformed how we operate. Our parent engagement is increasing, and student performance and focus is improving in just one semester."</p>
-              <cite>— Miss T.Khumalo</cite>
+
+          <div class="signup-type-card">
+            <div class="signup-type-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h4>Private Tutor Registration</h4>
+            <p>Ideal for independent educators and private tutors wanting to manage their students and lessons.</p>
+            <ul class="signup-type-features">
+              <li><i class="fas fa-check"></i> Personal teaching dashboard</li>
+              <li><i class="fas fa-check"></i> Create and share learning materials</li>
+              <li><i class="fas fa-check"></i> Schedule and manage tutoring sessions</li>
+              <li><i class="fas fa-check"></i> Track student progress individually</li>
+              <li><i class="fas fa-check"></i> Direct communication with students/parents</li>
+            </ul>
+          </div>
+
+          <div class="signup-type-card">
+            <div class="signup-type-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h4>General User Registration</h4>
+            <p>For students, parents, or anyone interested in accessing educational resources and courses.</p>
+            <ul class="signup-type-features">
+              <li><i class="fas fa-check"></i> Access to learning materials and courses</li>
+              <li><i class="fas fa-check"></i> Track your learning progress</li>
+              <li><i class="fas fa-check"></i> Join virtual classrooms</li>
+              <li><i class="fas fa-check"></i> Communicate with educators</li>
+              <li><i class="fas fa-check"></i> View performance analytics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="signup-cta-box">
+          <h3>Ready to Get Started?</h3>
+          <p>Choose your account type during registration and unlock the full potential of our platform. The process takes less than 3 minutes!</p>
+          <a href="https://global-lms-483720.uc.r.appspot.com/register/" target="_blank" class="btn-signup">
+            <i class="fas fa-rocket"></i> Sign Up Now
+          </a>
+          <p class="signup-note">
+            <i class="fas fa-shield-alt"></i> Secure registration &nbsp;
+            <i class="fas fa-clock"></i> Instant access &nbsp;
+            <i class="fas fa-headset"></i> Free support
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="founder" class="founder-section">
+    <div class="founder-container">
+      <div class="founder-image">
+        <a href="portfolio.htm" target="_blank" title="View Mthunzi's Portfolio">
+          <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo - Founder">
+        </a>
+      </div>
+      <div class="founder-info">
+        <h2>Meet the Founder</h2>
+        <h3>Mthunzi Khumalo</h3>
+        <p>Mthunzi Khumalo is a visionary entrepreneur and software developer with a passion for technology and youth empowerment. With extensive experience in the tech industry, Mthunzi has led Global-Future to become a leader in innovative solutions for business and education.</p>
+        <p>His mission is to bridge the digital divide and inspire the next generation of African tech leaders through cutting-edge solutions and meaningful mentorship.</p>
+        <div class="founder-cta">
+          <a href="portfolio.htm" target="_blank" class="btn-outline">
+            <i class="fas fa-arrow-right"></i> View Full Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <p class="section-subtitle">We'd love to hear from you. Let's connect and create something amazing together.</p>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Durban, South Africa</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p><a href="mailto:globalfuturecomm@gmail.com">globalfuturecomm@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+27606825110">+27 60 682 5110</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-link"></i>
+          <div>
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="lms-cta">
-        <div class="cta-content">
-          <h4>Ready to Transform Your School?</h4>
-          <p>Join hundreds of progressive schools across Africa who are already using Global Future LMS to deliver exceptional education outcomes.</p>
-          <div class="cta-buttons">
-            <a href="#contact" class="cta-primary">Request Free Demo</a>
-            <a href="#contact" class="cta-secondary">Download Brochure</a>
-          </div>
-          <p class="cta-note">✓ Free 30-day trial &nbsp; ✓ No setup fees &nbsp; ✓ 24/7 African support</p>
-        </div>
+      <div class="contact-map">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=31.0125%2C-29.8605%2C31.0225%2C-29.8505&amp;layer=mapnik&amp;marker=-29.8555%2C31.0175" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
 
-  <section id="founder">
-    <a href="portfolio.htm" target="_blank" title="View Mthunzi's Portfolio">
-      <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo" class="founder-img">
-    </a>
-    <div class="founder-bio">
-      <h2>Meet the Founder</h2>
-      <h3>Mthunzi Khumalo</h3>
-      <p>Mthunzi Khumalo is a visionary entrepreneur and software developer with a passion for technology and youth empowerment. With extensive experience in the tech industry, Mthunzi has led Global-Future to become a leader in innovative solutions for business and education. His mission is to bridge the digital divide and inspire the next generation of African tech leaders.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p><b>📍:</b> Find us in South Africa</p>
-      <p><b>Email:</b> globalfuturecomm@gmail.com</p>
-      <p><b>Phone:</b> +27 60 682 5110</p>
-      <p>Follow us on <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" style="color:#FFD700;">LinkedIn</a> | <a href="" style="color:#FFD700;">Twitter</a></p>
-    </div>
-    <div class="map">
-      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=31.0125%2C-29.8605%2C31.0225%2C-29.8505&amp;layer=mapnik&amp;marker=-29.8555%2C31.0175" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <img src="assets/global2.png" alt="Global-Future Logo" class="footer-logo">
-    &copy; 2025 Global-Future. All rights reserved. | Designed by Mthunzi Khumalo
+    <div class="footer-content">
+      <img src="assets/global2.png" alt="Global-Future Logo" class="footer-logo">
+      <p>&copy; 2025 Global-Future. All rights reserved. | Building Tomorrow's Solutions Today</p>
+      <p class="footer-credit">Designed & Developed by Mthunzi Khumalo</p>
+    </div>
   </footer>
 
   <script src="assets/main.js"></script>
