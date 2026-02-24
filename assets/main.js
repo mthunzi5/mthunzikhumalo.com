@@ -101,4 +101,44 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Mailto fallback: copy email + template to clipboard and show a small banner
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', function () {
+      try {
+        const href = this.getAttribute('href');
+        const mail = href.replace(/^mailto:/, '').split('?')[0];
+        const params = href.split('?')[1] || '';
+        const search = new URLSearchParams(params);
+        const subject = search.get('subject') ? decodeURIComponent(search.get('subject')) : '';
+        const body = search.get('body') ? decodeURIComponent(search.get('body')) : '';
+        const fallbackText = `To: ${mail}\nSubject: ${subject}\n\n${body}`;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(fallbackText).then(() => {
+            let banner = document.getElementById('mailtoFallbackBanner');
+            if (!banner) {
+              banner = document.createElement('div');
+              banner.id = 'mailtoFallbackBanner';
+              banner.style.position = 'fixed';
+              banner.style.right = '20px';
+              banner.style.bottom = '20px';
+              banner.style.background = 'rgba(34,34,34,0.95)';
+              banner.style.color = '#fff';
+              banner.style.padding = '12px 16px';
+              banner.style.borderRadius = '8px';
+              banner.style.boxShadow = '0 6px 18px rgba(0,0,0,0.2)';
+              banner.style.zIndex = 2000;
+              banner.style.fontSize = '14px';
+              banner.textContent = 'If your email client did not open, the message contents were copied to your clipboard. Paste into your email app and send to: globalfuturecomm@gmail.com';
+              document.body.appendChild(banner);
+              setTimeout(() => banner.remove(), 8000);
+            }
+          }).catch(() => {});
+        }
+      } catch (e) {
+        // silently ignore
+      }
+    });
+  });
 });

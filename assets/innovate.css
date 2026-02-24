@@ -1,0 +1,55 @@
+/* Page-specific styles for Innovate Me campaign */
+
+.innovate-hero {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #fff 0%, #fbfbfd 100%);
+  text-align: center;
+}
+
+.innovate-hero .container { max-width: 1100px; margin: 0 auto; }
+.innovate-hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.6rem; margin-bottom: 1rem; }
+.innovate-hero .lead { color: #555; margin-bottom: 1.5rem; font-size: 1.1rem; }
+.hero-actions { display:flex; gap:1rem; justify-content:center; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+
+.feature-card { background: #fff; padding:1.5rem; border-radius:12px; box-shadow: var(--shadow-sm); text-align:left; }
+.feature-card h3 { color: var(--color-primary); margin-bottom:0.5rem; }
+
+.examples-grid { display:flex; gap:1rem; flex-wrap:wrap; justify-content:space-between; }
+.mini-site { width: 100%; max-width: 340px; }
+.card { padding:1rem; border-radius:12px; box-shadow: var(--shadow-md); background:white; }
+.mini-preview { height:180px; border-radius:8px; display:flex; flex-direction:column; color:white; overflow:hidden; }
+.mini-preview .mini-header { padding:0.75rem 1rem; font-weight:700; }
+.mini-preview .mini-body { padding:1rem; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); margin-top:auto; }
+
+/* Image previews */
+.mini-preview img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Lightbox modal styles */
+.lightbox-modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.8); opacity:0; pointer-events:none; transition:opacity 0.25s ease; z-index:2000; }
+.lightbox-modal.open { opacity:1; pointer-events:auto; }
+.lightbox-inner { max-width:90%; max-height:90%; position:relative; }
+.lightbox-img { max-width:100%; max-height:100%; border-radius:6px; display:block; }
+.lightbox-close { position:absolute; top:-10px; right:-10px; background:#fff; color:#222; border-radius:50%; width:36px; height:36px; border:none; font-size:20px; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,0.2); }
+
+.mini-site .mini-preview { cursor:pointer; }
+
+.small-business { background: linear-gradient(135deg,#f6b199,#e86d5a); }
+.pro-service { background: linear-gradient(135deg,#6fb3ff,#2b7de9); }
+.ecommerce { background: linear-gradient(135deg,#7be495,#2ecc71); }
+
+.muted { color:#666; font-size:0.95rem; }
+
+.process .step { background:white; padding:1rem; border-radius:10px; text-align:center; box-shadow:var(--shadow-sm); font-weight:600; }
+
+.contact-box { background:linear-gradient(90deg,#fff,#fbfbfd); padding:2rem; border-radius:12px; text-align:center; box-shadow:var(--shadow-lg); }
+.contact-actions { display:flex; gap:1rem; justify-content:center; margin:1rem 0; }
+.contact-box .small { color:#777; margin-top:0.5rem; }
+
+@media (max-width:640px) {
+  .innovate-hero h1 { font-size:1.8rem; }
+  .mini-preview { height:150px; }
+}

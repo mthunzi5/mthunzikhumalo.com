@@ -39,7 +39,7 @@ class GlobalFutureAI {
         mission: "Bridge the digital divide and empower African communities through innovative technology",
         vision: "Be the leading tech solutions provider transforming education and business in Africa",
         values: "Innovation, Excellence, Integrity, and Community-focused Development",
-        description: "Global-Future is a dynamic tech company founded by Mthunzi Khumalo in Durban, South Africa. We specialize in delivering innovative software solutions for businesses, developing cutting-edge technology for education, and empowering the next generation of tech leaders."
+        description: "Global-Future delivers enterprise-grade digital services: web design & development, secure hosting & maintenance, AI-assisted automation, digital marketing & SEO, and end-to-end digital transformation consulting. We combine modern design, scalable infrastructure, and data-driven marketing to help organisations launch, grow and future-proof their digital presence."
       },
       
       statistics: {
@@ -53,34 +53,70 @@ class GlobalFutureAI {
 
       services: [
         {
-          name: "Software Development",
-          description: "Custom web, mobile, and enterprise software tailored to your business needs",
-          features: ["Web Applications", "Mobile Apps (iOS & Android)", "Enterprise Systems", "Custom Solutions", "API Development", "Database Design"],
-          pricing: "Starting from R15,000 for basic projects",
-          timeline: "2-12 weeks depending on complexity"
+          name: "Web Design & Development",
+          description: "High-conversion, responsive websites with modern UX, accessibility, and SEO fundamentals built in.",
+          features: ["Custom responsive design","Performance optimization","Accessibility (WCAG)","CMS integration (WordPress/Headless)","Conversion-focused UX","Analytics & tracking"],
+          pricing: "Contact us for a tailored quote.",
+          timeline: "1-4 weeks"
         },
         {
-          name: "Tech Solutions",
-          description: "Cloud migration, automation, and digital transformation services",
-          features: ["Cloud Services (AWS, Azure, Google Cloud)", "Automation & Workflow Optimization", "Digital Transformation", "IT Consulting", "System Integration"],
-          pricing: "Custom quotes based on requirements",
+          name: "Web Hosting & Maintenance",
+          description: "Managed, secure hosting with daily backups, SSL, monitoring and proactive updates.",
+          features: ["Managed hosting (Linux/Nginx)","Automated backups & restore","Uptime monitoring","Security hardening","Software updates & patches","Performance tuning"],
+          pricing: "Contact us for a tailored quote.",
+          timeline: "Ongoing"
+        },
+        {
+          name: "AI Assistance & Automation",
+          description: "Integrate AI-powered workflows to automate content, chat support, lead qualification and operational tasks.",
+          features: ["AI chat assistants","Content generation & summarization","Automated lead scoring","Email automation","Process automation (Zapier, Make)","Custom AI integrations"],
+          pricing: "Contact us for a tailored quote.",
+          timeline: "1-6 weeks"
+        },
+        {
+          name: "Digital Marketing & SEO",
+          description: "Data-driven marketing: SEO, paid advertising, social strategy and conversion optimization to grow traffic and revenue.",
+          features: ["Technical SEO","Content strategy","Paid search & social campaigns","Analytics & reporting","Local SEO & GMB","Conversion rate optimization"],
+          pricing: "Contact us for a tailored quote.",
+          timeline: "Ongoing"
+        },
+        {
+          name: "Digital Transformation Consulting",
+          description: "Strategic advisory to modernize operations, move to cloud-native platforms, and scale digital channels.",
+          features: ["Technical strategy","Roadmapping","Process redesign","Cloud migration","Change management","Training & enablement"],
+          pricing: "Contact us for a tailored quote.",
           timeline: "1-6 months"
         },
         {
-          name: "Youth Development",
-          description: "Training, mentorship, and development programs for young people",
-          features: ["Tech Training (Coding, Web Dev)", "Mentorship Programs", "Career Development", "Skills Building", "Internship Opportunities"],
-          pricing: "Free community programs available",
-          timeline: "3-6 month programs"
-        },
-        {
           name: "Global Future LMS",
-          description: "Africa's most comprehensive learning management system",
-          features: ["School Management", "Student Analytics", "Parent Engagement", "Teacher Tools", "Automated Reports", "Mobile Access"],
-          pricing: "From R2,500/month for small schools, R8,500/month for large schools",
+          description: "Africa's most comprehensive learning management system tailored for schools and educators.",
+          features: ["School Management","Student Analytics","Parent Engagement","Teacher Tools","Automated Reports","Mobile Access"],
+          pricing: "Contact us for a tailored quote.",
           timeline: "Setup in 1-3 days"
         }
       ],
+
+      // Invoice template and billing details useful for quick estimates
+      invoiceTemplate: {
+        companyName: "Global-Future",
+        companyAddress: "Durban, South Africa",
+        vatNumber: "VAT/Tax No: PLACEHOLDER",
+        bankDetails: {
+          accountName: "Global-Future",
+          bank: "PLACEHOLDER BANK",
+          accountNumber: "0000000000",
+          branchCode: "000000",
+          swiftIban: "PLACEHOLDER"
+        },
+        defaultTerms: "Payment due within 14 days. Late fees apply after 30 days.",
+        sampleLineItems: [
+          { description: "Website design - Responsive, modern, SEO-ready" },
+          { description: "Hosting & maintenance - Managed, secure, with daily backups" },
+          { description: "AI chat assistant setup - Custom trained for your business" },
+          { description: "SEO & digital marketing setup - Initial strategy & implementation" }
+        ],
+        notes: "All work subject to signed agreement. Custom projects billed on milestones unless otherwise agreed. Pricing excludes third-party licenses or paid advertising spend."
+      },
 
       lms: {
         name: "Global Future LMS",
@@ -144,6 +180,16 @@ class GlobalFutureAI {
           category: "services"
         },
         {
+          question: "Do you build websites and provide hosting?",
+          answer: "Yes. Under our 'Innovate Me' campaign we deliver end-to-end website solutions: strategic UX design, performant responsive development, secure managed hosting, and ongoing maintenance. We also offer AI-assisted content, SEO, and digital marketing to help sites convert visitors into customers.",
+          category: "services"
+        },
+        {
+          question: "How do invoicing and payments work?",
+          answer: "We issue professional invoices listing services, quantities, unit prices, VAT (if applicable), and payment terms. Default terms are payment within 14 days, with electronic bank transfer (EFT) or card payments. For larger projects we work on milestone billing as agreed in the proposal.",
+          category: "payment"
+        },
+        {
           question: "Where are you located?",
           answer: "We're based in Durban, South Africa, but we serve clients across Africa and internationally. Our LMS is used in 15+ countries, and we provide remote support worldwide.",
           category: "location"
@@ -193,6 +239,7 @@ class GlobalFutureAI {
       // Quick reply suggestions
       quickReplies: {
         initial: [
+          { text: "🚀 Innovate Me (Websites)", action: "innovate" },
           { text: "📚 Tell me about LMS", action: "lms" },
           { text: "💰 Pricing & Plans", action: "pricing" },
           { text: "🎯 Book a Demo", action: "demo" },
@@ -211,6 +258,9 @@ class GlobalFutureAI {
         ],
         services: [
           { text: "💻 Software Development", action: "software" },
+          { text: "🖥️ Web Design & Hosting", action: "web" },
+          { text: "🤖 AI & Automation", action: "ai" },
+          { text: "📣 Digital Marketing & SEO", action: "marketing" },
           { text: "🌟 Youth Programs", action: "youth" },
           { text: "📚 LMS Platform", action: "lms" }
         ]
@@ -508,6 +558,21 @@ class GlobalFutureAI {
         text: `🚀 Our Services:\n\n${servicesList}\n\nEach service is tailored to your specific needs. Which one interests you most?`,
         quickReplies: this.knowledgeBase.quickReplies.services,
         category: 'services'
+      };
+    }
+
+    // Innovate Me / Website & Digital Services
+    if (this.matches(input, ['innovate', 'innovate me', 'website', 'web design', 'host', 'hosting', 'digital marketing', 'seo', 'ai assistant', 'automation'])) {
+      const invoice = this.knowledgeBase.invoiceTemplate;
+      const sampleLines = invoice.sampleLineItems.map(i => `• ${i.description}`).join('\n');
+      return {
+        text: `🚀 Innovate Me — End-to-end Website & Digital Transformation\n\nWe provide strategic UX-led web design, performance-focused development, secure managed hosting, AI-assisted automation, and conversion-driven digital marketing. Our approach is enterprise-grade yet accessible for growing businesses.\n\nKey deliverables:\n${sampleLines}\n\nPayment Terms: ${invoice.defaultTerms}\n\nWould you like a customized proposal or a free consultation to discuss your needs?`,
+        quickReplies: [
+          { text: "Request a Consultation", action: "contact" },
+          { text: "Schedule a Call", action: "callback" },
+          { text: "See Examples", action: "examples" }
+        ],
+        category: 'innovate'
       };
     }
 
