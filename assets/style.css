@@ -534,6 +534,10 @@ section {
   background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
 }
 
+.service-card:nth-child(5)::before {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+}
+
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
@@ -578,6 +582,58 @@ section {
 .service-highlights i {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+/* ========================================
+   FINDMEMARKET SECTION
+   ======================================== */
+
+.marketplace-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 100%);
+  border-top: 4px solid var(--color-secondary);
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.marketplace-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.marketplace-panel {
+  background: linear-gradient(145deg, #0f172a 0%, #1f2937 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.marketplace-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(52, 152, 219, 0.3), transparent 50%);
+  pointer-events: none;
+}
+
+.marketplace-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.marketplace-copy h3 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.marketplace-copy p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 /* ========================================

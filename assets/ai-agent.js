@@ -138,6 +138,20 @@ class GlobalFutureAI {
         ]
       },
 
+      marketplace: {
+        name: "FindMeMarket",
+        url: "https://www.findmemarket.store/",
+        tagline: "A business marketplace where companies connect, sell, and buyers shop confidently.",
+        features: [
+          "Business-to-business networking and visibility",
+          "Seller storefront and product discovery",
+          "Buyer-friendly browsing and purchasing",
+          "Digital-first commerce for growing brands"
+        ],
+        audience: ["Businesses", "Sellers", "Buyers", "Entrepreneurs", "Individuals"],
+        value: "FindMeMarket helps businesses grow online while making it easier for buyers to find and buy from trusted sellers."
+      },
+
       founder: {
         name: "Mthunzi Khumalo",
         title: "Founder & CEO",
@@ -178,6 +192,11 @@ class GlobalFutureAI {
           question: "What services do you offer?",
           answer: "We offer 4 main services: 1) Software Development (web, mobile, enterprise apps), 2) Tech Solutions (cloud, automation, digital transformation), 3) Youth Development programs (training & mentorship), and 4) Global Future LMS (school management platform).",
           category: "services"
+        },
+        {
+          question: "What is FindMeMarket?",
+          answer: "FindMeMarket is one of our digital systems where businesses connect, sell, and buyers can buy products and services online. It supports both business growth and customer discovery in one marketplace at https://www.findmemarket.store/.",
+          category: "marketplace"
         },
         {
           question: "Do you build websites and provide hosting?",
@@ -240,6 +259,7 @@ class GlobalFutureAI {
       quickReplies: {
         initial: [
           { text: "🚀 Innovate Me (Websites)", action: "innovate" },
+          { text: "🛍️ FindMeMarket", action: "marketplace" },
           { text: "📚 Tell me about LMS", action: "lms" },
           { text: "💰 Pricing & Plans", action: "pricing" },
           { text: "🎯 Book a Demo", action: "demo" },
@@ -305,6 +325,7 @@ class GlobalFutureAI {
     
     this.currentPage = 'home';
     if (hash.includes('lms')) this.currentPage = 'lms';
+    else if (hash.includes('marketplace')) this.currentPage = 'marketplace';
     else if (hash.includes('services')) this.currentPage = 'services';
     else if (hash.includes('signup')) this.currentPage = 'signup';
     else if (hash.includes('contact')) this.currentPage = 'contact';
@@ -401,6 +422,39 @@ class GlobalFutureAI {
       quickReplies: response.quickReplies || [],
       category: response.category
     };
+  }
+
+  processAction(action) {
+    const actionMap = {
+      innovate: 'innovate me website services',
+      marketplace: 'tell me about findmemarket',
+      lms: 'tell me about lms',
+      pricing: 'pricing plans',
+      demo: 'book a demo',
+      services: 'what services do you offer',
+      trial: 'free trial',
+      signup: 'sign up',
+      contact: 'contact information',
+      founder: 'who is the founder',
+      software: 'software development services',
+      web: 'web design and hosting',
+      ai: 'ai assistance and automation',
+      marketing: 'digital marketing and seo',
+      youth: 'youth development programs',
+      company: 'about global future',
+      whatsapp: 'whatsapp contact',
+      callback: 'request a call back',
+      examples: 'innovate me examples',
+      trial_start: 'start free trial',
+      signup_guide: 'how to register',
+      school: 'i am a school',
+      tutor: 'i am a tutor',
+      parent: 'i am a parent',
+      marketplace_sellers: 'how businesses sell on findmemarket',
+      marketplace_buyers: 'how buyers buy on findmemarket'
+    };
+
+    return this.processQuery(actionMap[action] || action || 'help');
   }
 
   getContextualResponse(input) {
@@ -521,7 +575,7 @@ class GlobalFutureAI {
     // Help/What can you do
     if (this.matches(input, ['help', 'what can you do', 'how can you help', 'capabilities', 'assist', 'options'])) {
       return {
-        text: `I'm here to help! 🚀 I can assist you with:\n\n✅ Information about Global-Future and our services\n✅ Detailed LMS platform features and pricing\n✅ Registration and free trial signup\n✅ Demo scheduling\n✅ Contact information and support\n✅ Information about our founder, Mthunzi Khumalo\n\nWhat would you like to explore?`,
+        text: `I'm here to help! 🚀 I can assist you with:\n\n✅ Information about Global-Future and our services\n✅ FindMeMarket marketplace (businesses connect, sell, and buyers buy)\n✅ Detailed LMS platform features and pricing\n✅ Registration and free trial signup\n✅ Demo scheduling\n✅ Contact information and support\n✅ Information about our founder, Mthunzi Khumalo\n\nWhat would you like to explore?`,
         quickReplies: this.knowledgeBase.quickReplies.initial,
         category: 'help'
       };
@@ -558,6 +612,21 @@ class GlobalFutureAI {
         text: `🚀 Our Services:\n\n${servicesList}\n\nEach service is tailored to your specific needs. Which one interests you most?`,
         quickReplies: this.knowledgeBase.quickReplies.services,
         category: 'services'
+      };
+    }
+
+    // FindMeMarket - dedicated marketplace guidance
+    if (this.matches(input, ['findmemarket', 'marketplace', 'market store', 'online market', 'buy and sell', 'business connect', 'seller', 'buyer', 'ecommerce', 'shop online'])) {
+      const market = this.knowledgeBase.marketplace;
+      return {
+        text: `🛍️ ${market.name}\n\n${market.tagline}\n\n${market.value}\n\nWho it serves:\n${market.audience.map(a => `• ${a}`).join('\n')}\n\nKey benefits:\n${market.features.map(f => `• ${f}`).join('\n')}\n\n🔗 Visit now: ${market.url}`,
+        quickReplies: [
+          { text: 'Open FindMeMarket', action: 'marketplace' },
+          { text: 'How can businesses sell?', action: 'marketplace_sellers' },
+          { text: 'How can buyers buy?', action: 'marketplace_buyers' },
+          { text: 'Talk to the team', action: 'contact' }
+        ],
+        category: 'marketplace'
       };
     }
 
@@ -649,7 +718,7 @@ class GlobalFutureAI {
     // Contact information - Multiple channels
     if (this.matches(input, ['contact', 'email', 'phone', 'reach', 'get in touch', 'location', 'call', 'whatsapp'])) {
       return {
-        text: `📞 Let's Connect!\n\n📧 Email: ${this.knowledgeBase.company.email}\n☎️ Phone: ${this.knowledgeBase.company.phone}\n💬 WhatsApp: ${this.knowledgeBase.company.whatsapp}\n📍 Location: ${this.knowledgeBase.company.location}\n\n💼 LinkedIn: ${this.knowledgeBase.founder.linkedin}\n⏰ Response Time: ${this.knowledgeBase.statistics.supportResponse}\n\nWe're here to help! What's the best way to reach you?`,
+        text: `📞 Let's Connect!\n\n📧 Email: ${this.knowledgeBase.company.email}\n☎️ Phone: ${this.knowledgeBase.company.phone}\n💬 WhatsApp: ${this.knowledgeBase.company.whatsapp}\n📍 Location: ${this.knowledgeBase.company.location}\n🛍️ FindMeMarket: ${this.knowledgeBase.marketplace.url}\n\n💼 LinkedIn: ${this.knowledgeBase.founder.linkedin}\n⏰ Response Time: ${this.knowledgeBase.statistics.supportResponse}\n\nWe're here to help! What's the best way to reach you?`,
         quickReplies: [
           { text: "Email me details", action: "email" },
           { text: "Call me back", action: "callback" },
@@ -713,7 +782,7 @@ class GlobalFutureAI {
     const contextSuggestions = this.getContextualSuggestions();
     
     return {
-      text: `I'd be happy to help you with that! 😊\n\nI can provide detailed information about:\n\n• Our LMS Platform and features\n• Software development services\n• Youth development programs\n• Pricing and registration\n• Scheduling demos\n• Contact information\n\nWhat interests you most?`,
+      text: `I'd be happy to help you with that! 😊\n\nI can provide detailed information about:\n\n• FindMeMarket for business selling and buyer shopping\n• Our LMS platform and features\n• Software development and IT consulting services\n• Digital transformation, digital marketing, and automation\n• Pricing, registration, and demo scheduling\n• Contact information\n\nWhat interests you most?`,
       quickReplies: contextSuggestions,
       category: 'clarification'
     };
@@ -734,7 +803,10 @@ class GlobalFutureAI {
         { text: "See all services", action: "services" }
       ];
     } else {
-      return this.knowledgeBase.quickReplies.initial;
+      return [
+        ...this.knowledgeBase.quickReplies.initial.slice(0, 4),
+        { text: "📞 Talk to our team", action: "contact" }
+      ];
     }
   }
 
@@ -749,7 +821,9 @@ class GlobalFutureAI {
       'service', 'price', 'pricing', 'cost', 'fee', 'trial', 'demo', 'training',
       'youth', 'tech', 'technology', 'cloud', 'app', 'website', 'contact', 'hiring',
       'job', 'internship', 'course', 'lesson', 'class', 'registration', 'signup',
-      'africa', 'durban', 'south africa', 'email', 'phone', 'support', 'help'
+      'africa', 'durban', 'south africa', 'email', 'phone', 'support', 'help',
+      'findmemarket', 'marketplace', 'market store', 'business connect', 'seller', 'buyer',
+      'buy and sell', 'ecommerce'
     ];
 
     // Check if input contains any in-scope keywords
@@ -786,7 +860,7 @@ class GlobalFutureAI {
       }
       
       return {
-        text: `❌ No, we don't sell ${topic}.\n\nWe're Global-Future - we provide:\n✅ Software development solutions\n✅ Tech solutions & digital transformation\n✅ Global Future LMS platform (for schools)\n✅ Youth development & tech training\n\nIs there anything related to our services I can help you with?`,
+        text: `❌ We don't directly sell ${topic} through this chat.\n\nWe're Global-Future - we provide:\n✅ Software development solutions\n✅ Tech solutions & digital transformation\n✅ Global Future LMS platform (for schools)\n✅ FindMeMarket for business buying and selling\n✅ Youth development & tech training\n\nWould you like the FindMeMarket link or help with any of our services?`,
         quickReplies: this.knowledgeBase.quickReplies.initial,
         category: 'out-of-scope'
       };
@@ -1071,6 +1145,7 @@ class ChatUI {
     const greetings = {
       home: "👋 Welcome to Global-Future! Need help exploring our services?",
       lms: "📚 Interested in our LMS platform? I can answer all your questions!",
+      marketplace: "🛍️ Looking at FindMeMarket? I can help sellers and buyers get started quickly!",
       services: "💼 Looking for tech solutions? Let me help you find the perfect fit!",
       signup: "🚀 Ready to get started? I can guide you through registration!",
       contact: "📞 Want to connect? I can help you reach the right person!",
@@ -1342,7 +1417,9 @@ class ChatUI {
       // Get AI response
       setTimeout(() => {
         this.removeTypingIndicator();
-        const response = this.ai.processQuery(reply.text);
+        const response = reply.action
+          ? this.ai.processAction(reply.action)
+          : this.ai.processQuery(reply.text);
         this.addMessage('assistant', response.text, true, response.quickReplies);
       }, 800);
     }
