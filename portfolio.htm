@@ -4,308 +4,558 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mthunzi Khumalo | Portfolio</title>
+  <meta name="description" content="Portfolio of Mthunzi Khumalo.">
+  <link rel="icon" href="assets/logo-new.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/style.css">
-  <!-- Chat Widget Styles -->
   <link rel="stylesheet" href="assets/chat-styles.css">
   <style>
-    .portfolio-header { text-align: center; margin-top: 2rem; }
-    .portfolio-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #3498db; box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3); margin-bottom: 1rem; }
-    .bio { max-width: 700px; margin: 2rem auto; background: #ffffff; border-radius: 20px; padding: 2rem; color: #2c2c2c; box-shadow: 0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
-    .projects { max-width: 900px; margin: 2rem auto; }
-    .project-list { list-style: none; padding: 0; }
-    .project-list li { background: #ffffff; margin-bottom: 1rem; border-radius: 12px; padding: 1.2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e9ecef; border-left: 4px solid #e74c3c; }
-    .project-list a { color: #3498db; font-weight: bold; text-decoration: none; transition: color 0.3s; }
-    .project-list a:hover { text-decoration: underline; color: #2980b9; }
-    .exp-edu { max-width: 900px; margin: 2rem auto; display: flex; flex-wrap: wrap; gap: 2rem; }
-    .exp, .edu { flex: 1 1 300px; background: #ffffff; border-radius: 20px; padding: 2rem; color: #2c2c2c; box-shadow: 0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
-    .exp { border-left: 4px solid #2ecc71; }
-    .edu { border-left: 4px solid #9b59b6; }
-    
-    /* Enhanced Professional Expertise Cards */
-    .service-card:nth-child(1) { border-left: 4px solid #e74c3c; }
-    .service-card:nth-child(2) { border-left: 4px solid #3498db; }
-    .service-card:nth-child(3) { border-left: 4px solid #2ecc71; }
-    .service-card:nth-child(4) { border-left: 4px solid #9b59b6; }
-    .service-card:nth-child(5) { border-left: 4px solid #f39c12; }
-    .service-card:nth-child(6) { border-left: 4px solid #1abc9c; }
-    
-    .service-card .service-price {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-weight: 600;
-      color: #2c2c2c;
-      border: 1px solid #dee2e6;
-      display: inline-block;
+    .portfolio-hero {
+      padding-top: 6rem;
+      padding-bottom: 3.25rem;
     }
-    
-    @media (max-width: 900px) { .exp-edu { flex-direction: column; } }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .profile-image {
+      border: 1px solid #dfe5eb;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: #ffffff;
+    }
+
+    .profile-image img {
+      width: 100%;
+      min-height: 410px;
+      object-fit: cover;
+    }
+
+    .profile-card {
+      border: 1px solid #dfe5eb;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      padding: 1.35rem;
+    }
+
+    .profile-card h1 {
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      margin-bottom: 0.6rem;
+    }
+
+    .role-tags {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .role-tags span {
+      padding: 0.45rem 0.8rem;
+      border: 1px solid #dbe3ea;
+      background: #f4f7f9;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #243142;
+    }
+
+    .portfolio-section {
+      padding: 0 0 3.5rem;
+    }
+
+    .portfolio-box {
+      border: 1px solid #dfe5eb;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: var(--shadow-card);
+      padding: 1.2rem;
+    }
+
+    .portfolio-box h3,
+    .portfolio-box h2 {
+      margin-bottom: 0.55rem;
+    }
+
+    .platform-highlight {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .platform-highlight .btn {
+      margin-top: 0.8rem;
+    }
+
+    .skills-grid {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills-grid li {
+      border: 1px solid #dce3ea;
+      background: #f8fafb;
+      color: #223142;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+    }
+
+    .expertise-card {
+      border: 1px solid #dfe5eb;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .expertise-card h4 {
+      margin-bottom: 0.45rem;
+      font-size: 1.08rem;
+    }
+
+    .expertise-card ul {
+      margin: 0.6rem 0 0;
+      padding-left: 1rem;
+      color: #304155;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+    }
+
+    .project-links a {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .gallery-wrap {
+      margin-top: 0.9rem;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #dfe5eb;
+      box-shadow: var(--shadow-card);
+      background: #fff;
+    }
+
+    .slide-img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .slide-img.active {
+      display: block;
+    }
+
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      background: rgba(17, 17, 17, 0.82);
+      color: #ffffff;
+      font-size: 1.15rem;
+    }
+
+    .slide-btn.prev {
+      left: 0.7rem;
+    }
+
+    .slide-btn.next {
+      right: 0.7rem;
+    }
+
+    .list-clean {
+      margin: 0;
+      padding-left: 1rem;
+      color: #304155;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .old-photo {
+      max-width: 420px;
+      margin: 0 auto;
+      border: 1px solid #dfe5eb;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: #fff;
+    }
+
+    .old-photo img {
+      width: 100%;
+      min-height: 380px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1020px) {
+      .portfolio-grid,
+      .grid-2,
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-image img {
+        min-height: 300px;
+      }
+    }
   </style>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="portfolio-header">
-    <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo" class="portfolio-img">
-    <h1>Mthunzi Khumalo</h1>
-    <h3>Software Developer | Cloud Enthusiast | Entrepreneur</h3>
-    <div class="portfolio-contacts">
-      ||<span> 060 682 5110</span> || <br>||
-      <a href="mailto:mthunziapplications@gmail.com" style="color: #3498db;">mthunziapplications@gmail.com</a>  ||<br>||
-      <a href="mailto:mthunzikhumalo47@gmail.com" style="color: #3498db;">mthunzikhumalo47@gmail.com</a> || <br>||
-      <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" style="color:#e74c3c;">LinkedIn</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header" id="home">
+    <nav class="floating-nav" aria-label="Portfolio navigation">
+      <a href="#home" class="brand" aria-label="Portfolio home">
+        <img src="assets/logo-new.png" alt="Global Future logo" class="brand-mark brand-mark-new" loading="eager">
+        <span class="brand-word">Portfolio</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navShell">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-shell" id="navShell">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Main Website</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Connect</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="portfolio-hero" id="about">
+      <div class="shell portfolio-grid">
+        <div class="profile-image" data-reveal="fade">
+          <img src="assets/mthunzi-new.jpeg" alt="Mthunzi Khumalo" loading="eager">
+        </div>
+
+        <article class="profile-card" data-reveal="up">
+          <p class="eyebrow">Mthunzi Khumalo</p>
+          <h1>Portfolio and Professional Profile</h1>
+          <p>
+            I have a degree in ICT, and I work as a Software Developer, Entrepreneur, and Technical Director.
+          </p>
+          <div class="role-tags" aria-label="Professional roles">
+            <span>Degree in ICT</span>
+            <span>Software Developer</span>
+            <span>Entrepreneur</span>
+            <span>Technical Director</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section section-alt" id="platforms">
+      <div class="shell">
+        <article class="portfolio-box platform-highlight" data-reveal="up">
+          <h2>FindMeMarket Platform</h2>
+          <p>One of our digital systems where businesses connect, sell, and buyers shop in one place.</p>
+          <a href="https://www.findmemarket.store/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open FindMeMarket</a>
+        </article>
+
+        <article class="portfolio-box" data-reveal="up">
+          <h3>About Me</h3>
+          <p>
+            I am a passionate software developer with a strong foundation in full-stack web development, cloud computing,
+            and data analysis. With experience in building scalable applications and a keen interest in emerging technologies,
+            I strive to deliver innovative solutions that drive business success. I am eager to contribute my skills and grow
+            professionally in a dynamic tech environment.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="skills">
+      <div class="shell">
+        <article class="portfolio-box" data-reveal="up">
+          <h2>Skills</h2>
+          <ul class="skills-grid">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML and CSS</li>
+            <li>Django</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL</li>
+            <li>Git and GitHub</li>
+            <li>Azure</li>
+            <li>Firebase</li>
+            <li>Agile and Scrum</li>
+            <li>UI/UX Design</li>
+            <li>Flask</li>
+            <li>Mobile apps</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section section-alt" id="expertise">
+      <div class="shell">
+        <div class="section-head" data-reveal="up">
+          <p class="eyebrow">Professional Expertise</p>
+          <h2>What I can contribute to your organization</h2>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card" data-reveal="up">
+            <h4>Full-Stack Web Development</h4>
+            <p>Experienced in building end-to-end web solutions using modern technologies.</p>
+            <ul>
+              <li>React, JavaScript, HTML5/CSS3</li>
+              <li>Python Django, Node.js backends</li>
+              <li>Database design (SQL, MongoDB)</li>
+              <li>RESTful APIs and integrations</li>
+              <li>Responsive design principles</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal="up">
+            <h4>Mobile Application Development</h4>
+            <p>Skilled in developing cross-platform mobile applications for Android and iOS.</p>
+            <ul>
+              <li>React Native development</li>
+              <li>Flutter cross-platform apps</li>
+              <li>Native Android (Java/Kotlin)</li>
+              <li>App store deployment</li>
+              <li>Mobile UI/UX optimization</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal="up">
+            <h4>Cloud Computing</h4>
+            <p>Intermediate-level proficiency across major cloud platforms.</p>
+            <ul>
+              <li>Azure cloud services and deployment</li>
+              <li>AWS EC2, S3, Lambda functions</li>
+              <li>Firebase real-time databases</li>
+              <li>Docker containerization</li>
+              <li>CI/CD pipeline setup</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal="up">
+            <h4>Data Analysis and Insights</h4>
+            <p>Proficient in extracting meaningful insights through data analytics and reporting.</p>
+            <ul>
+              <li>Python (Pandas, NumPy, Matplotlib)</li>
+              <li>SQL data querying and analysis</li>
+              <li>Data visualization dashboards</li>
+              <li>Statistical analysis and reporting</li>
+              <li>Machine learning fundamentals</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal="up">
+            <h4>Educational Technology Solutions</h4>
+            <p>Specialized in learning management systems and educational platforms.</p>
+            <ul>
+              <li>LMS development and customization</li>
+              <li>Educational software design</li>
+              <li>Student management systems</li>
+              <li>Assessment and grading tools</li>
+              <li>Parent-school communication platforms</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal="up">
+            <h4>Project Management and Leadership</h4>
+            <p>Track record in leading technical projects from concept to deployment.</p>
+            <ul>
+              <li>Agile and Scrum methodologies</li>
+              <li>Team leadership and mentoring</li>
+              <li>Technical documentation</li>
+              <li>Client communication and requirements</li>
+              <li>Quality assurance and testing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="projects">
+      <div class="shell">
+        <article class="portfolio-box" data-reveal="up">
+          <h2>Featured Project Demos</h2>
+          <div class="project-links">
+            <a href="https://www.findmemarket.store/" target="_blank" rel="noopener noreferrer">FindMeMarket Live Platform</a>
+            <a href="https://jubaskillsdevelopment.onrender.com/login" target="_blank" rel="noopener noreferrer">JubaSkillsDevelopment Live Demo</a>
+            <a href="https://corundum.onrender.com/facilitator/email/group" target="_blank" rel="noopener noreferrer">Corundum Live Demo</a>
+          </div>
+        </article>
+
+        <article class="portfolio-box" data-reveal="up" style="margin-top: 0.8rem;">
+          <h2>Project Gallery</h2>
+          <div class="gallery-wrap">
+            <img class="slide-img active" src="assets/Screenshot (23).png" alt="FaceAttendance">
+            <img class="slide-img" src="assets/Screenshot (24).png" alt="JubaSkillsDevelopment">
+            <img class="slide-img" src="assets/Screenshot (25).png" alt="Corundum">
+            <img class="slide-img" src="assets/Screenshot (26).png" alt="Project LMS">
+            <img class="slide-img" src="assets/Screenshot (27).png" alt="Mentor Management">
+            <img class="slide-img" src="assets/Screenshot (28).png" alt="Learner Management System">
+            <button id="prevImg" class="slide-btn prev" type="button" aria-label="Previous image">&#8592;</button>
+            <button id="nextImg" class="slide-btn next" type="button" aria-label="Next image">&#8594;</button>
+          </div>
+        </article>
+
+        <article class="portfolio-box" data-reveal="up" style="margin-top: 0.8rem;">
+          <h2>Projects</h2>
+          <ul class="list-clean">
+            <li><a href="https://github.com/mthunzi5/FaceAttendance" target="_blank" rel="noopener noreferrer">FaceAttendance</a> - AI-powered facial recognition attendance system.</li>
+            <li><a href="https://github.com/mthunzi5/Corundum" target="_blank" rel="noopener noreferrer">Corundum</a> - Modern business management platform.</li>
+            <li><a href="https://github.com/mthunzi5/JubaSkillsDevelopment" target="_blank" rel="noopener noreferrer">JubaSkillsDevelopment</a> - Skills development and training portal.</li>
+            <li><a href="https://github.com/mthunzi5/Mentor_Management" target="_blank" rel="noopener noreferrer">Mentor_Management</a> - Mentor and mentee management system.</li>
+            <li><a href="https://github.com/mthunzi5/project-lms" target="_blank" rel="noopener noreferrer">project-lms</a> - Learning management system for schools.</li>
+            <li><a href="https://github.com/mthunzi5/Learner_Management_System" target="_blank" rel="noopener noreferrer">Learner_Management_System</a> - Comprehensive learner management platform.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section section-alt" id="background">
+      <div class="shell grid-2">
+        <article class="portfolio-box" data-reveal="up">
+          <h2>Certificates</h2>
+          <ul class="list-clean">
+            <li>NDG Linux Unhatched [Cisco Academy]</li>
+            <li>Introduction to Cyber Security [Cisco Academy]</li>
+            <li>Fundamentals of Computer Science Security [Cisco Academy]</li>
+            <li>Software Testing Tutorial [Great Learning]</li>
+            <li>Full Stack Development [FNB App Academy]</li>
+            <li>AI Fundamentals [Microsoft and DUT]</li>
+            <li>AI and Accessibility [Microsoft and DUT]</li>
+            <li>Generative AI [Microsoft and DUT]</li>
+            <li>Search Technology [Microsoft and DUT]</li>
+            <li>Responsible AI [Microsoft and DUT]</li>
+            <li>Microsoft Copilot [Microsoft and DUT]</li>
+          </ul>
+        </article>
+
+        <article class="portfolio-box" data-reveal="up">
+          <h2>Experience</h2>
+          <ul class="list-clean">
+            <li>JCI Durban Intern</li>
+            <li>JCI Mid Year Hackathon Volunteer</li>
+            <li>Imbokodo Hackathon Volunteer (KZN-Tech Horizon)</li>
+          </ul>
+          <h2 style="margin-top: 1rem;">Education</h2>
+          <ul class="list-clean">
+            <li>HC in Information Technology (2021)</li>
+            <li>Diploma in Application Development in ICT (2024)</li>
+            <li>Advanced Diploma in ICT (2025)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="contact">
+      <div class="shell">
+        <article class="portfolio-box" data-reveal="up" style="text-align: center;">
+          <h2>Contact</h2>
+          <p>
+            <a href="mailto:mthunziapplications@gmail.com">mthunziapplications@gmail.com</a> |
+            <a href="mailto:mthunzikhumalo47@gmail.com">mthunzikhumalo47@gmail.com</a> |
+            <a href="tel:+27606825110">+27 60 682 5110</a> |
+            <a href="https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
+        </article>
+
+        <article class="portfolio-box" data-reveal="fade" style="margin-top: 0.8rem; text-align: center;">
+          <h3>Previous Profile Image</h3>
+          <div class="old-photo">
+            <img src="assets/mthunzi-khumalo.jpg" alt="Mthunzi Khumalo previous profile image" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <img src="assets/logo-new.png" alt="Global Future logo" class="footer-logo footer-logo-new" loading="lazy">
+        <p>Portfolio page for Mthunzi Khumalo.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="index.html">Main Website</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Roles</h4>
+        <ul>
+          <li>Degree in ICT</li>
+          <li>Software Developer</li>
+          <li>Entrepreneur</li>
+          <li>Technical Director</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:mthunziapplications@gmail.com">mthunziapplications@gmail.com</a></li>
+          <li><a href="mailto:mthunzikhumalo47@gmail.com">mthunzikhumalo47@gmail.com</a></li>
+          <li><a href="tel:+27606825110">+27 60 682 5110</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div style="max-width:900px; margin:1.5rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; border-left:4px solid #3498db; text-align:center;">
-    <h2 style="color:#2c2c2c; margin-bottom:0.75rem;">FindMeMarket Platform</h2>
-    <p style="color:#555; margin-bottom:1rem;">One of our digital systems where businesses connect, sell, and buyers shop in one place.</p>
-    <a href="https://www.findmemarket.store/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#3498db; color:#fff; text-decoration:none; font-weight:700; padding:0.75rem 1.2rem; border-radius:10px;">Open FindMeMarket</a>
-  </div>
-
-  <div class="bio">
-    <h2 style="color:#2c2c2c;">About Me</h2>
-    <p>
-      I am a passionate software developer with a strong foundation in full-stack web development, cloud computing, and data analysis. 
-      With experience in building scalable applications and a keen interest in emerging technologies, I strive to deliver innovative solutions that drive business success.
-      I am eager to contribute my skills and grow professionally in a dynamic tech environment.
-    </p>  
-  <div class="skills" style="max-width:900px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef;">
-    <h2 style="color:#2c2c2c;">Skills</h2>
-    <ul style="display:flex; flex-wrap:wrap; gap:1.5rem; list-style:none; padding:0;">
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Python</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">JavaScript</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">HTML &amp; CSS</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">Django</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">React</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Node.js</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">SQL</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">Git &amp; GitHub</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Azure</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Firebase</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #2ecc71; color: #2c2c2c; font-weight: 600;">Agile &amp; Scrum</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #9b59b6; color: #2c2c2c; font-weight: 600;">UI/UX Design</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #e74c3c; color: #2c2c2c; font-weight: 600;">Flask</li>
-      <li style="background:#f8f9fa; border-radius:12px; padding:0.8rem 1.5rem; border: 2px solid #3498db; color: #2c2c2c; font-weight: 600;">Mobile apps</li>
-    </ul>
-  </div>
-
-  <!-- ...existing code... -->
-<section id="services" class="portfolio-services">
-  <h2>My Professional Expertise</h2>
-  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto; color: #555; font-size: 1.1rem;">
-    As a versatile software developer and tech professional, I bring comprehensive expertise across multiple domains. 
-    Here's what I can contribute to your organization:
-  </p>
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>Full-Stack Web Development</h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Experienced in building end-to-end web solutions using modern technologies. Proficient in both frontend and backend development with a focus on scalable, user-friendly applications.
-      </p>
-      <ul>
-        <li>React, JavaScript, HTML5/CSS3</li>
-        <li>Python Django, Node.js backends</li>
-        <li>Database design (SQL, MongoDB)</li>
-        <li>RESTful APIs & integrations</li>
-        <li>Responsive design principles</li>
-      </ul>
-      <div class="service-price"></div>
+    <div class="shell footer-bottom">
+      <p>&copy; 2026 Mthunzi Khumalo. All rights reserved.</p>
+      <p><a href="index.html">Global Future</a></p>
     </div>
-    
-    <div class="service-card">
-      <h3>Mobile Application Development</h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Skilled in developing cross-platform mobile applications for both Android and iOS. Experience with native development and hybrid frameworks for diverse business needs.
-      </p>
-      <ul>
-        <li>React Native development</li>
-        <li>Flutter cross-platform apps</li>
-        <li>Native Android (Java/Kotlin)</li>
-        <li>App store deployment</li>
-        <li>Mobile UI/UX optimization</li>
-      </ul>
-      <div class="service-price"></div>
-    </div>
-    
-    <div class="service-card">
-      <h3>Cloud Computing </h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Intermediate-level proficiency in major cloud platforms. Experienced in deploying, scaling, and managing applications in cloud environments with focus on cost-efficiency and reliability.
-      </p>
-      <ul>
-        <li>Azure cloud services & deployment</li>
-        <li>AWS EC2, S3, Lambda functions</li>
-        <li>Firebase real-time databases</li>
-        <li>Docker containerization</li>
-        <li>CI/CD pipeline setup</li>
-      </ul>
-      <div class="service-price">Intermediate Level</div>
-    </div>
-    
-    <div class="service-card">
-      <h3>Data Analysis & Insights</h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Proficient in extracting meaningful insights from data using statistical analysis and visualization tools. Experience in building data-driven solutions for business intelligence.
-      </p>
-      <ul>
-        <li>Python (Pandas, NumPy, Matplotlib)</li>
-        <li>SQL data querying & analysis</li>
-        <li>Data visualization dashboards</li>
-        <li>Statistical analysis & reporting</li>
-        <li>Machine learning fundamentals</li>
-      </ul>
-      <div class="service-price"></div>
-    </div>
-    
-    <div class="service-card">
-      <h3>Educational Technology Solutions</h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Specialized in developing learning management systems and educational platforms. Deep understanding of educational workflows and student-teacher-parent ecosystems.
-      </p>
-      <ul>
-        <li>LMS development & customization</li>
-        <li>Educational software design</li>
-        <li>Student management systems</li>
-        <li>Assessment & grading tools</li>
-        <li>Parent-school communication platforms</li>
-      </ul>
-      <div class="service-price">Specialized Domain</div>
-    </div>
-    
-    <div class="service-card">
-      <h3>Project Management & Leadership</h3>
-      <p>
-        <b>My Expertise:</b> <br>
-        Proven track record in leading development teams and managing technical projects from conception to deployment. Strong communication and problem-solving skills.
-      </p>
-      <ul>
-        <li>Agile & Scrum methodologies</li>
-        <li>Team leadership & mentoring</li>
-        <li>Technical documentation</li>
-        <li>Client communication & requirements gathering</li>
-        <li>Quality assurance & testing</li>
-      </ul>
-      <div class="service-price">Leadership Ready</div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ...existing code... -->
-
-<!-- Project Links Section -->
-<div class="project-links" style="max-width:700px; margin:2rem auto 1.5rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); text-align:center; border: 1px solid #e9ecef;">
-  <h2 style="color:#2c2c2c;">Featured Project Demos</h2>
-  <a href="https://www.findmemarket.store/" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin:1rem 1.5rem; color:#2ecc71; font-size:1.15rem; font-weight:bold; text-decoration:none; transition: color 0.3s;">
-    FindMeMarket Live Platform
-  </a>
-  <a href="https://jubaskillsdevelopment.onrender.com/login" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#3498db; font-size:1.15rem; font-weight:bold; text-decoration:none; transition: color 0.3s;">
-    JubaSkillsDevelopment Live Demo
-  </a>
-  <a href="https://corundum.onrender.com/facilitator/email/group" target="_blank" style="display:inline-block; margin:1rem 1.5rem; color:#e74c3c; font-size:1.15rem; font-weight:bold; text-decoration:none; transition: color 0.3s;">
-    Corundum Live Demo
-  </a>
-</div>
-
-<!-- Project Gallery Slideshow Section -->
-<div class="gallery-slideshow" style="max-width:700px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef;">
-  <h2 style="color:#2c2c2c; text-align:center;">Project Gallery</h2>
-  <div id="slideShowImages" style="position:relative; max-width:600px; margin:2rem auto;">
-    <img class="slide-img" src="assets/Screenshot (23).png" alt="FaceAttendance" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:block;">
-    <img class="slide-img" src="assets/Screenshot (24).png" alt="JubaSkillsDevelopment" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
-    <img class="slide-img" src="assets/Screenshot (25).png" alt="Corundum" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
-    <img class="slide-img" src="assets/Screenshot (26).png" alt="Project LMS" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
-    <img class="slide-img" src="assets/Screenshot (27).png" alt="Mentor Management" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
-    <img class="slide-img" src="assets/Screenshot (28).png" alt="Learner Management System" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1); display:none;">
-    <!-- Slideshow controls -->
-    <button id="prevImg" style="position:absolute;top:50%;left:0;transform:translateY(-50%);background:#e74c3c;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.9;box-shadow:0 2px 8px rgba(231, 76, 60, 0.3);">&#8592;</button>
-    <button id="nextImg" style="position:absolute;top:50%;right:0;transform:translateY(-50%);background:#3498db;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;opacity:0.9;box-shadow:0 2px 8px rgba(52, 152, 219, 0.3);">&#8594;</button>
-  </div>
-</div>
-
-<script>
-  // Simple JS slideshow for images only
-  const imgs = document.querySelectorAll('.slide-img');
-  let imgIdx = 0;
-  function showImg(idx) {
-    imgs.forEach((img, i) => img.style.display = i === idx ? 'block' : 'none');
-  }
-  document.getElementById('prevImg').onclick = function() {
-    imgIdx = (imgIdx - 1 + imgs.length) % imgs.length;
-    showImg(imgIdx);
-  };
-  document.getElementById('nextImg').onclick = function() {
-    imgIdx = (imgIdx + 1) % imgs.length;
-    showImg(imgIdx);
-  };
-  showImg(imgIdx);
-</script>
-
-<!-- ...existing code... -->
-
-
-
-
-
-
-  <div class="projects">
-    <h2 style="color:#FFD700;">Projects</h2>
-    <ul class="project-list">
-      <li><a href="https://github.com/mthunzi5/FaceAttendance" target="_blank">FaceAttendance</a> - AI-powered facial recognition attendance system.</li>
-      <li><a href="https://github.com/mthunzi5/Corundum" target="_blank">Corundum</a> - Modern business management platform.</li>
-      <li><a href="https://github.com/mthunzi5/JubaSkillsDevelopment" target="_blank">JubaSkillsDevelopment</a> - Skills development and training portal.</li>
-      <li><a href="https://github.com/mthunzi5/Mentor_Management" target="_blank">Mentor_Management</a> - Mentor and mentee management system.</li>
-      <li><a href="https://github.com/mthunzi5/project-lms" target="_blank">project-lms</a> - Learning management system for schools.</li>
-      <li><a href="https://github.com/mthunzi5/Learner_Management_System" target="_blank">Learner_Management_System</a> - Comprehensive learner management platform.</li>
-    </ul>
-  </div>
-
-  <div class="certificates" style="max-width:900px; margin:2rem auto; background:#ffffff; border-radius:20px; padding:2rem; color:#2c2c2c; box-shadow:0 4px 25px rgba(0,0,0,0.08); border: 1px solid #e9ecef; border-left: 4px solid #2ecc71;">
-    <h2 style="color:#2c2c2c;">Certificates</h2>
-    <ul style="list-style:disc inside; color: #555;">
-      <li>NDG Linux Unhatched [Cisco Academy]</li>
-      <li>Introduction to Cyber Security [Cisco Academy]</li>
-      <li>Fundamentals of Computer Science Security [Cisco Academy]</li>
-      <li>Software Testing Tutorial [Great Learning]</li>
-      <li>Full Stack Development [FNB App Academy]</li>
-      <li>AI Fundamentals [Microsoft and DUT]</li>
-      <li>AI and Accessibility [Microsoft and DUT]</li>
-      <li>Generative AI [Microsoft and DUT]</li>
-      <li>Search Technology [Microsoft and DUT]</li>
-      <li>Responsible AI [Microsoft and DUT]</li>
-      <li>Microsoft Copilot [Microsoft and DUT]</li>
-    </ul>
-  </div>
-
-  <div class="exp-edu">
-    <div class="exp">
-      <h2 style="color:#2ecc71;">Experience</h2>
-      <ul>
-        <li>JCI Durban Intern</li>
-        <li>JCI Mid Year Hackathon Volunteer</li>
-        <li>Imbokodo Hackathon Volunteer (KZN-Tech Horizon)</li>
-      </ul>
-    </div>
-    <div class="edu">
-      <h2 style="color:#9b59b6;">Education</h2>
-      <ul>
-        <li>HC in Information Technology (2021)</li>
-        <li>Diploma in Application Development in ICT (2024)</li>
-        <li>Advanced Diploma in ICT (2025)</li>
-      </ul>
-    </div>
-  </div>
-
-  <footer style="background:linear-gradient(135deg, #2c2c2c 0%, #34495e 100%); color:#ffffff; text-align:center; padding:1.5rem 0 1rem 0; font-size:1.1rem; letter-spacing:1px; margin-top:2rem;">
-    &copy; 2025 Mthunzi Khumalo. All rights reserved.
   </footer>
-  <!-- AI Chat Assistant -->
+
   <button id="chatToggle" aria-label="Open AI Chat Assistant">
     <i class="fas fa-comments"></i>
   </button>
@@ -317,7 +567,7 @@
           <i class="fas fa-robot"></i>
         </div>
         <div class="chat-header-text">
-          <h3>Global-Future AI</h3>
+          <h3>Global Future AI</h3>
           <p>Your virtual assistant</p>
         </div>
       </div>
@@ -326,21 +576,13 @@
       </button>
     </div>
 
-    <div id="chatMessages" class="chat-messages">
-      <!-- Messages will be added here dynamically -->
-    </div>
+    <div id="chatMessages" class="chat-messages"></div>
 
     <div class="chat-input-container">
       <button id="voiceBtn" class="chat-btn voice-btn" title="Voice input" aria-label="Voice input">
         <i class="fas fa-microphone"></i>
       </button>
-      <input 
-        type="text" 
-        id="userInput" 
-        class="chat-input" 
-        placeholder="Ask me anything about Global-Future..."
-        aria-label="Chat input"
-      />
+      <input type="text" id="userInput" class="chat-input" placeholder="Ask me anything about Global Future..." aria-label="Chat input">
       <button id="speakerBtn" class="chat-btn speaker-btn" title="Toggle voice output" aria-label="Toggle voice output">
         <i class="fas fa-volume-up"></i>
       </button>
@@ -349,6 +591,34 @@
       </button>
     </div>
   </div>
+
+  <script>
+    const imgs = document.querySelectorAll(".slide-img");
+    let imgIdx = 0;
+
+    function showImg(idx) {
+      imgs.forEach((img, i) => {
+        img.classList.toggle("active", i === idx);
+      });
+    }
+
+    const prevBtn = document.getElementById("prevImg");
+    const nextBtn = document.getElementById("nextImg");
+
+    if (prevBtn && nextBtn && imgs.length > 0) {
+      prevBtn.addEventListener("click", () => {
+        imgIdx = (imgIdx - 1 + imgs.length) % imgs.length;
+        showImg(imgIdx);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        imgIdx = (imgIdx + 1) % imgs.length;
+        showImg(imgIdx);
+      });
+
+      showImg(imgIdx);
+    }
+  </script>
 
   <script src="assets/main.js"></script>
   <script src="assets/ai-agent.js"></script>

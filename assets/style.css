@@ -144,10 +144,21 @@ section {
   gap: 0.7rem;
 }
 
+.brand-marks {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 .brand-mark {
   width: 34px;
   height: 34px;
   object-fit: contain;
+}
+
+.brand-mark-new {
+  width: 30px;
+  height: 30px;
 }
 
 .brand-word {
@@ -446,6 +457,13 @@ section {
   margin-bottom: 2.2rem;
 }
 
+.section-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+}
+
 .section-head h2 {
   font-size: clamp(1.65rem, 3vw, 2.75rem);
   line-height: 1.2;
@@ -700,6 +718,19 @@ section {
   width: 44px;
   height: 44px;
   margin-bottom: 0.8rem;
+}
+
+.footer-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo-new {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 0;
 }
 
 .site-footer p,
