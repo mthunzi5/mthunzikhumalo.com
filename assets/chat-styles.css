@@ -17,7 +17,7 @@
   cursor: pointer;
   font-size: 24px;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
   z-index: 9999;
