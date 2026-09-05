@@ -158,7 +158,6 @@ class GlobalFutureAI {
         description: "Mthunzi Khumalo is a visionary entrepreneur and software developer with a passion for technology and youth empowerment. His mission is to bridge the digital divide and inspire the next generation of African tech leaders.",
         experience: "10+ years in software development",
         expertise: ["Full-stack Development", "EdTech Solutions", "Business Strategy", "Youth Mentorship"],
-        portfolio: "portfolio.htm",
         linkedin: "https://www.linkedin.com/in/mthunzi-khumalo-7275a024a/"
       },
 
