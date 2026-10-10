@@ -24,35 +24,24 @@
   color: rgba(255, 255, 255, 0.86);
 }
 
-.innovate-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 1.8rem;
-  align-items: center;
+.innovate-hero-content {
+  max-width: 760px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.innovate-hero-content .hero-actions {
+  justify-content: center;
 }
 
 .innovate-hero h1 {
   font-size: clamp(1.95rem, 4vw, 3.6rem);
   line-height: 1.1;
-  max-width: 16ch;
 }
 
 .innovate-hero .lead {
-  margin-top: 1rem;
+  margin: 1rem auto 0;
   max-width: 56ch;
-}
-
-.innovate-hero-media {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 26px 56px rgba(7, 14, 22, 0.14);
-  min-height: 450px;
-}
-
-.innovate-hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .innovate-cards {
@@ -232,7 +221,6 @@
 }
 
 @media (max-width: 1080px) {
-  .innovate-grid,
   .innovate-cards,
   .example-grid,
   .process-grid {
@@ -241,7 +229,6 @@
 }
 
 @media (max-width: 760px) {
-  .innovate-grid,
   .innovate-cards,
   .example-grid,
   .process-grid {
@@ -250,11 +237,6 @@
 
   .innovate-hero {
     padding-top: 5rem;
-  }
-
-  .innovate-hero-media {
-    min-height: 300px;
-    border-radius: 16px;
   }
 
   .example-card img {
