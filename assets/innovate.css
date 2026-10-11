@@ -4,11 +4,16 @@
   overflow: hidden;
   padding-top: 7.6rem;
   padding-bottom: 3.2rem;
-  background:
-    linear-gradient(170deg, rgba(8, 14, 11, 0.88), rgba(5, 9, 7, 0.95)),
-    url("theme-footer-bg.png") center top / cover no-repeat,
-    #0b0f0d;
+  background: #5b616b url("theme-footer-bg.png") center / 220px repeat;
   color: #ffffff;
+}
+
+.innovate-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(170deg, rgba(43, 48, 54, 0.32), rgba(43, 48, 54, 0.5));
+  z-index: 0;
 }
 
 .innovate-hero .eyebrow {
@@ -21,10 +26,12 @@
 }
 
 .innovate-hero .lead {
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .innovate-hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 760px;
   text-align: center;
   margin-inline: auto;
