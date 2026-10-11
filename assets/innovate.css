@@ -4,16 +4,8 @@
   overflow: hidden;
   padding-top: 7.6rem;
   padding-bottom: 3.2rem;
-  background: #5b616b url("theme-footer-bg.png") center / 220px repeat;
+  background: url("theme-footer-bg.png") center top / contain no-repeat, #1a1f28;
   color: #ffffff;
-}
-
-.innovate-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(170deg, rgba(43, 48, 54, 0.32), rgba(43, 48, 54, 0.5));
-  z-index: 0;
 }
 
 .innovate-hero .eyebrow {
