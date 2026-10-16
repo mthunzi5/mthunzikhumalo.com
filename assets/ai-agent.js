@@ -33,7 +33,7 @@ class GlobalFutureAI {
         name: "Global-Future",
         founder: "Mthunzi Khumalo",
         location: "Durban, South Africa",
-        email: "globalfuturecomm@gmail.com",
+        email: "info@globalfuture.co.za",
         phone: "+27 60 682 5110",
         whatsapp: "+27 60 682 5110",
         mission: "Bridge the digital divide and empower African communities through innovative technology",
@@ -184,7 +184,7 @@ class GlobalFutureAI {
         },
         {
           question: "Do you offer demos?",
-          answer: "Absolutely! We offer personalized demos where we walk you through all features. You can also start a free 30-day trial to explore on your own. Contact us at globalfuturecomm@gmail.com or call +27 60 682 5110 to schedule a demo.",
+          answer: "Absolutely! We offer personalized demos where we walk you through all features. You can also start a free 30-day trial to explore on your own. Contact us at info@globalfuture.co.za or call +27 60 682 5110 to schedule a demo.",
           category: "demo"
         },
         {
@@ -214,7 +214,7 @@ class GlobalFutureAI {
         },
         {
           question: "How can I contact you?",
-          answer: "Multiple ways to reach us: Email at globalfuturecomm@gmail.com, call/WhatsApp +27 60 682 5110, connect on LinkedIn, or use the contact form on our website. We respond within 2 hours during business hours!",
+          answer: "Multiple ways to reach us: Email at info@globalfuture.co.za, call/WhatsApp +27 60 682 5110, connect on LinkedIn, or use the contact form on our website. We respond within 2 hours during business hours!",
           category: "contact"
         },
         {
