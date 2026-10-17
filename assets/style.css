@@ -1110,6 +1110,18 @@ section {
   flex-wrap: wrap;
 }
 
+.powered-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.powered-by img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
